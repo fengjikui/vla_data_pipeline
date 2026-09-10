@@ -1,0 +1,40 @@
+{
+  "accessed_on": "2026-09-11",
+  "scope": "Sum of four subset metadata declarations, not independently validated trajectory count",
+  "records": [
+    {
+      "subset": "g1-pick-apple",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/info.json",
+      "total_episodes": 311,
+      "total_frames": 29864,
+      "fps": 20,
+      "codebase_version": "v2.1"
+    },
+    {
+      "subset": "g1-pick-grapes",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-grapes/meta/info.json",
+      "total_episodes": 233,
+      "total_frames": 26970,
+      "fps": 20,
+      "codebase_version": "v2.1"
+    },
+    {
+      "subset": "g1-pick-pear",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-pear/meta/info.json",
+      "total_episodes": 264,
+      "total_frames": 32319,
+      "fps": 20,
+      "codebase_version": "v2.1"
+    },
+    {
+      "subset": "g1-pick-starfruit",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-starfruit/meta/info.json",
+      "total_episodes": 287,
+      "total_frames": 34640,
+      "fps": 20,
+      "codebase_version": "v2.1"
+    }
+  ],
+  "total_episodes_declared_in_metadata": 1095,
+  "total_frames_declared_in_metadata": 123793
+}

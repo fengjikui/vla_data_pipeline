@@ -1,0 +1,515 @@
+[
+  {
+    "id": 1,
+    "title": "Open X-Embodiment repository",
+    "publisher": "Google DeepMind / OXE Collaboration",
+    "publication_date_or_version": "2023 起，持续更新",
+    "url": "https://github.com/google-deepmind/open_x_embodiment",
+    "accessed_on": "2026-09-11",
+    "used_for": "RLDS、访问入口、多来源集合"
+  },
+  {
+    "id": 2,
+    "title": "DROID project",
+    "publisher": "DROID Dataset Team",
+    "publication_date_or_version": "2024；页面列 2025 更新",
+    "url": "https://droid-dataset.github.io/",
+    "accessed_on": "2026-09-11",
+    "used_for": "规模、场景、标定与语言更新"
+  },
+  {
+    "id": 3,
+    "title": "The DROID Dataset",
+    "publisher": "DROID Dataset Team",
+    "publication_date_or_version": "持续更新，未标明完整发布日期",
+    "url": "https://droid-dataset.github.io/droid/the-droid-dataset",
+    "accessed_on": "2026-09-11",
+    "used_for": "下载体积、100 episode 调试集、schema 与已知注释疑点"
+  },
+  {
+    "id": 4,
+    "title": "BridgeData V2",
+    "publisher": "Berkeley RAIL 等",
+    "publication_date_or_version": "2023",
+    "url": "https://rail-berkeley.github.io/bridgedata/",
+    "accessed_on": "2026-09-11",
+    "used_for": "示范与脚本轨迹区分、WidowX、CC BY"
+  },
+  {
+    "id": 5,
+    "title": "AgiBot World / GO-1 repository",
+    "publisher": "OpenDriveLab / AgiBot World",
+    "publication_date_or_version": "2024–2025 发布，持续更新",
+    "url": "https://github.com/OpenDriveLab/AgiBot-World",
+    "accessed_on": "2026-09-11",
+    "used_for": "Alpha/Beta 规模、转换流程、NC-SA"
+  },
+  {
+    "id": 6,
+    "title": "AgiBot World 2026 dataset card",
+    "publisher": "AgiBot World Team",
+    "publication_date_or_version": "2026；核查 revision 见 evidence",
+    "url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+    "accessed_on": "2026-09-11",
+    "used_for": "G2、扩展标注、访问结构与许可"
+  },
+  {
+    "id": 7,
+    "title": "AGIBOT WORLD 2026 Theme 3 announcement",
+    "publisher": "AGIBOT",
+    "publication_date_or_version": "2026-09-01",
+    "url": "https://www.agibot.com/article/231/detail/95.html",
+    "accessed_on": "2026-09-11",
+    "used_for": "检索摘要可见；正文重取不稳定，主题目录以 HF 文件清单核验"
+  },
+  {
+    "id": 8,
+    "title": "Galaxea Open-World Dataset card",
+    "publisher": "OpenGalaxea",
+    "publication_date_or_version": "2025 研究发布；当前卡持续更新",
+    "url": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset",
+    "accessed_on": "2026-09-11",
+    "used_for": "500+ 小时、R1-Lite、字段、LeRobot v2.1、许可"
+  },
+  {
+    "id": 9,
+    "title": "RoboMIND dataset card",
+    "publisher": "x-humanoid-robomind",
+    "publication_date_or_version": "2024 起，持续更新",
+    "url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+    "accessed_on": "2026-09-11",
+    "used_for": "1.x 数据入口、gated、Apache-2.0"
+  },
+  {
+    "id": 10,
+    "title": "RoboMIND 2.0 project",
+    "publisher": "Beijing Innovation Center of Humanoid Robotics / Peking University",
+    "publication_date_or_version": "2025-12 论文，持续更新",
+    "url": "https://log2r.github.io/RoboMIND2.0/",
+    "accessed_on": "2026-09-11",
+    "used_for": "310k、触觉／移动／仿真子集及本体"
+  },
+  {
+    "id": 11,
+    "title": "RoboMIND2.0 official release",
+    "publisher": "X-Humanoid / ModelScope",
+    "publication_date_or_version": "2026 发布入口，持续更新",
+    "url": "https://www.modelscope.cn/datasets/X-Humanoid/RoboMIND2.0",
+    "accessed_on": "2026-09-11",
+    "used_for": "官方下载与 Apache 2.0 标示；未下载完整包"
+  },
+  {
+    "id": 12,
+    "title": "PhysicalAI-Robotics-GR00T-Teleop-G1 card",
+    "publisher": "NVIDIA GEAR",
+    "publication_date_or_version": "2025-06-01 创建日期（数据卡）",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+    "accessed_on": "2026-09-11",
+    "used_for": "上身水果拿放、数据卡规模与格式、CC BY"
+  },
+  {
+    "id": 13,
+    "title": "G1 apple subset info.json",
+    "publisher": "NVIDIA GEAR",
+    "publication_date_or_version": "固定 revision 0d7bdd0，2025-06-11",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/blob/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/info.json",
+    "accessed_on": "2026-09-11",
+    "used_for": "实际读取：20 Hz、43 维、311 episodes、v2.1"
+  },
+  {
+    "id": 14,
+    "title": "G1_Dex1_Clean_Table card and metadata",
+    "publisher": "Unitree Robotics",
+    "publication_date_or_version": "固定 revision 80a9d44，2026-01-29",
+    "url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Clean_Table/tree/80a9d440fbd5366899b5875db5a9db11f1e7857c",
+    "accessed_on": "2026-09-11",
+    "used_for": "200 episodes、v2.1、四相机和动作分组"
+  },
+  {
+    "id": 15,
+    "title": "G1 WBT BrainCo dishwasher card",
+    "publisher": "Unitree Robotics",
+    "publication_date_or_version": "固定 revision 16c01db，2026-03-27",
+    "url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher/blob/16c01dbfcb2159783ea575acd42d1cec9b69e311/README.md",
+    "accessed_on": "2026-09-11",
+    "used_for": "root 和关节、手型顺序与开合语义"
+  },
+  {
+    "id": 16,
+    "title": "G1 WBT BrainCo info.json",
+    "publisher": "Unitree Robotics",
+    "publication_date_or_version": "固定 revision 16c01db，2026-03-27",
+    "url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher/blob/16c01dbfcb2159783ea575acd42d1cec9b69e311/meta/info.json",
+    "accessed_on": "2026-09-11",
+    "used_for": "实际读取：300 episodes、30 Hz、v3、各字段维度"
+  },
+  {
+    "id": 17,
+    "title": "PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+    "publisher": "NVIDIA",
+    "publication_date_or_version": "2025 起；核查 revision 2026-03-05",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+    "accessed_on": "2026-09-11",
+    "used_for": "分组轨迹规模、G1 loco-manipulation、许可"
+  },
+  {
+    "id": 18,
+    "title": "RoboTwin 2.0 repository",
+    "publisher": "RoboTwin Team",
+    "publication_date_or_version": "2025 论文；持续更新",
+    "url": "https://github.com/RoboTwin-Platform/RoboTwin",
+    "accessed_on": "2026-09-11",
+    "used_for": "预采轨迹、任务生成、文档入口"
+  },
+  {
+    "id": 19,
+    "title": "RoboCasa / RoboCasa365 repository",
+    "publisher": "RoboCasa Team",
+    "publication_date_or_version": "365 版发布 2026-02-18",
+    "url": "https://github.com/robocasa/robocasa",
+    "accessed_on": "2026-09-11",
+    "used_for": "场景规模、示范、代码与数据许可"
+  },
+  {
+    "id": 20,
+    "title": "Genie Sim 3.0 introduction",
+    "publisher": "AGIBOT",
+    "publication_date_or_version": "CES 2026",
+    "url": "https://www.agibot.com/article/231/detail/29.html",
+    "accessed_on": "2026-09-11",
+    "used_for": "厂商自报合成规模；不是独立验收结果"
+  },
+  {
+    "id": 21,
+    "title": "GenieSim3.0-Dataset current files",
+    "publisher": "AgiBot World",
+    "publication_date_or_version": "固定 revision 0369966，2026-09-07",
+    "url": "https://huggingface.co/datasets/agibot-world/GenieSim3.0-Dataset/tree/0369966c70a7fd98dbc3ad767224365e1469691d",
+    "accessed_on": "2026-09-11",
+    "used_for": "实际清单含 checkpoints；API license 缺失"
+  },
+  {
+    "id": 22,
+    "title": "EgoDex repository",
+    "publisher": "Apple",
+    "publication_date_or_version": "2025",
+    "url": "https://github.com/apple/ml-egodex",
+    "accessed_on": "2026-09-11",
+    "used_for": "人类视频与姿态、829 小时、CC BY-NC-ND"
+  },
+  {
+    "id": 23,
+    "title": "Universal Manipulation Interface",
+    "publisher": "Stanford / Columbia / Toyota Research Institute",
+    "publication_date_or_version": "2024",
+    "url": "https://umi-gripper.github.io/",
+    "accessed_on": "2026-09-11",
+    "used_for": "手持采集、相对轨迹、时延与迁移"
+  },
+  {
+    "id": 24,
+    "title": "RH20T project and data specification",
+    "publisher": "Shanghai Jiao Tong University",
+    "publication_date_or_version": "2023 起，持续更新",
+    "url": "https://rh20t.github.io/",
+    "accessed_on": "2026-09-11",
+    "used_for": "接触多模态、格式、触觉覆盖与下载"
+  },
+  {
+    "id": 25,
+    "title": "ABC-130k pinned dataset card",
+    "publisher": "XDOF / ABC collaborators",
+    "publication_date_or_version": "2026；固定 revision 75ca0b8",
+    "url": "https://huggingface.co/datasets/XDOF/ABC-130k/blob/75ca0b88bda489f2bd935d72454593ecb90efb52/README.md",
+    "accessed_on": "2026-09-11",
+    "used_for": "当前精确规模、MCAP、标注与 Apache 2.0"
+  },
+  {
+    "id": 26,
+    "title": "1X World Model Challenge repository",
+    "publisher": "1X Technologies",
+    "publication_date_or_version": "2024 起，持续更新",
+    "url": "https://github.com/1x-technologies/1xgpt",
+    "accessed_on": "2026-09-11",
+    "used_for": "EVE、视频 token 与 action、官方 HF 链接"
+  },
+  {
+    "id": 27,
+    "title": "Introducing Helix 02: Full-Body Autonomy",
+    "publisher": "Figure",
+    "publication_date_or_version": "2026-01-27",
+    "url": "https://www.figure.ai/news/helix-02",
+    "accessed_on": "2026-09-11",
+    "used_for": "厂商全身技术描述；不是公开训练集证据"
+  },
+  {
+    "id": 28,
+    "title": "openpi repository",
+    "publisher": "Physical Intelligence",
+    "publication_date_or_version": "2024 起；核查 HEAD 2026-08-24",
+    "url": "https://github.com/Physical-Intelligence/openpi",
+    "accessed_on": "2026-09-11",
+    "used_for": "模型种类、数据适配、推理／微调资源与发布边界"
+  },
+  {
+    "id": 29,
+    "title": "OpenVLA repository and project",
+    "publisher": "OpenVLA Team",
+    "publication_date_or_version": "2024 起，持续更新",
+    "url": "https://github.com/openvla/openvla",
+    "accessed_on": "2026-09-11",
+    "used_for": "原版动作 token、LoRA 显存；项目入口可追溯"
+  },
+  {
+    "id": 30,
+    "title": "OpenVLA-OFT repository",
+    "publisher": "OpenVLA-OFT Team",
+    "publication_date_or_version": "2025 起，持续更新",
+    "url": "https://github.com/moojink/openvla-oft",
+    "accessed_on": "2026-09-11",
+    "used_for": "连续动作和动作块配方差异"
+  },
+  {
+    "id": 31,
+    "title": "GR00T N1.7 Hardware Recommendations",
+    "publisher": "NVIDIA",
+    "publication_date_or_version": "核查 HEAD 2026-08-20",
+    "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/getting_started/hardware_recommendation.md",
+    "accessed_on": "2026-09-11",
+    "used_for": "显存、解冻范围、推理率与执行率"
+  },
+  {
+    "id": 32,
+    "title": "GR00T Fine-tune on Custom Embodiments",
+    "publisher": "NVIDIA",
+    "publication_date_or_version": "核查 HEAD 2026-08-20",
+    "url": "https://github.com/NVIDIA/Isaac-GR00T/blob/main/getting_started/finetune_new_embodiment.md",
+    "accessed_on": "2026-09-11",
+    "used_for": "LeRobot v2、模态与动作配置"
+  },
+  {
+    "id": 33,
+    "title": "Data Collection for VLA",
+    "publisher": "NVIDIA GR00T-WholeBodyControl",
+    "publication_date_or_version": "持续更新",
+    "url": "https://nvlabs.github.io/GR00T-WholeBodyControl/tutorials/data_collection.html",
+    "accessed_on": "2026-09-11",
+    "used_for": "全身采集、robot/SMPL/camera 输入"
+  },
+  {
+    "id": 34,
+    "title": "LeRobotDataset v3.0",
+    "publisher": "Hugging Face LeRobot",
+    "publication_date_or_version": "v3 文档，持续更新",
+    "url": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3",
+    "accessed_on": "2026-09-11",
+    "used_for": "文件布局、episode 元数据、v2/v3 差异"
+  },
+  {
+    "id": 35,
+    "title": "RLDS specification",
+    "publisher": "Google Research",
+    "publication_date_or_version": "2021 起；仓库 2025-11-29 archived",
+    "url": "https://github.com/google-research/rlds",
+    "accessed_on": "2026-09-11",
+    "used_for": "episode、step、末步与终止约定"
+  },
+  {
+    "id": 36,
+    "title": "robomimic Dataset Overview",
+    "publisher": "robomimic Team",
+    "publication_date_or_version": "0.5 文档",
+    "url": "https://robomimic.github.io/docs/datasets/overview.html",
+    "accessed_on": "2026-09-11",
+    "used_for": "HDF5 容器内的逻辑结构"
+  },
+  {
+    "id": 37,
+    "title": "Synthetic Data Generation and Imitation Learning with Isaac Lab Mimic",
+    "publisher": "Isaac Lab Team",
+    "publication_date_or_version": "develop 文档，核查 2026-09-11",
+    "url": "https://isaac-sim.github.io/IsaacLab/develop/source/overview/imitation-learning/teleop_imitation.html",
+    "accessed_on": "2026-09-11",
+    "used_for": "种子示范、子任务与轨迹扩展"
+  },
+  {
+    "id": 38,
+    "title": "xr_teleoperate repository",
+    "publisher": "Unitree Robotics",
+    "publication_date_or_version": "v1.6 2026-07-29，持续更新",
+    "url": "https://github.com/unitreerobotics/xr_teleoperate",
+    "accessed_on": "2026-09-11",
+    "used_for": "XR 遥操作和记录工具"
+  },
+  {
+    "id": 39,
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "publisher": "Zhao et al., ALOHA / ACT",
+    "publication_date_or_version": "RSS 2023",
+    "url": "https://tonyzhaozh.github.io/aloha/aloha.pdf",
+    "accessed_on": "2026-09-11",
+    "used_for": "主从命令、状态、动作块与模仿"
+  },
+  {
+    "id": 40,
+    "title": "Diffusion Policy",
+    "publisher": "Chi et al.",
+    "publication_date_or_version": "2023",
+    "url": "https://diffusion-policy.cs.columbia.edu/",
+    "accessed_on": "2026-09-11",
+    "used_for": "条件动作生成与滚动执行"
+  },
+  {
+    "id": 41,
+    "title": "Our First Generalist Policy (pi0)",
+    "publisher": "Physical Intelligence",
+    "publication_date_or_version": "2024",
+    "url": "https://www.pi.website/blog/pi0",
+    "accessed_on": "2026-09-11",
+    "used_for": "VLA 与 flow-based 动作模型"
+  },
+  {
+    "id": 42,
+    "title": "pi-star-0.6: a VLA That Learns From Experience",
+    "publisher": "Physical Intelligence",
+    "publication_date_or_version": "2025",
+    "url": "https://www.physicalintelligence.company/download/pistar06.pdf",
+    "accessed_on": "2026-09-11",
+    "used_for": "RECAP、自主数据、干预与价值条件"
+  },
+  {
+    "id": 43,
+    "title": "LIBERO repository",
+    "publisher": "Lifelong Robot Learning Team",
+    "publication_date_or_version": "2023 起，持续更新",
+    "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+    "accessed_on": "2026-09-11",
+    "used_for": "基准、数据与评测环境"
+  },
+  {
+    "id": 44,
+    "title": "DROID Robot Platform",
+    "publisher": "DROID Dataset Team",
+    "publication_date_or_version": "2024 起，持续更新",
+    "url": "https://github.com/droid-dataset/droid",
+    "accessed_on": "2026-09-11",
+    "used_for": "真实遥操作与采集硬件工具"
+  },
+  {
+    "id": 45,
+    "title": "Collect Data – RoboTwin 2.0",
+    "publisher": "RoboTwin Team",
+    "publication_date_or_version": "当前在线文档",
+    "url": "https://robotwin-platform.github.io/doc/usage/collect-data.html",
+    "accessed_on": "2026-09-11",
+    "used_for": "数据格式路径、生成流程、GPU 兼容提醒"
+  },
+  {
+    "id": 46,
+    "title": "Physical AI Data Engine",
+    "publisher": "Scale AI",
+    "publication_date_or_version": "服务页未标发布日期",
+    "url": "https://scale.com/physical-ai",
+    "accessed_on": "2026-09-11",
+    "used_for": "采集与标注服务范围，供应商自报"
+  },
+  {
+    "id": 47,
+    "title": "具身智能数据解决方案",
+    "publisher": "数据堂",
+    "publication_date_or_version": "服务页未标发布日期",
+    "url": "https://www.datatang.com/embodied-ai-solutions",
+    "accessed_on": "2026-09-11",
+    "used_for": "定制采集／多模态服务，供应商自报"
+  },
+  {
+    "id": 48,
+    "title": "About XDOF",
+    "publisher": "XDOF",
+    "publication_date_or_version": "页面未标发布日期",
+    "url": "https://www.xdof.ai/about",
+    "accessed_on": "2026-09-11",
+    "used_for": "规模化数据与基础设施服务"
+  },
+  {
+    "id": 49,
+    "title": "RoboMIND: Benchmark on Multi-embodiment Intelligence Normative Data",
+    "publisher": "RoboMIND authors",
+    "publication_date_or_version": "2024-12",
+    "url": "https://arxiv.org/abs/2412.13877",
+    "accessed_on": "2026-09-11",
+    "used_for": "初版 107k/479 与四本体，不混入 2.0"
+  },
+  {
+    "id": 50,
+    "title": "ABC v3 smoke metadata",
+    "publisher": "Hugging Face LeRobot",
+    "publication_date_or_version": "固定 revision b342a0f，2026-06-24",
+    "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/blob/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/meta/info.json",
+    "accessed_on": "2026-09-11",
+    "used_for": "实际读取：85 episodes、14 维、v3"
+  },
+  {
+    "id": 51,
+    "title": "1X World Model: Sampling Challenge Update",
+    "publisher": "1X Technologies",
+    "publication_date_or_version": "2024-11-05",
+    "url": "https://www.1x.tech/discover/1x-world-model-sampling-challenge",
+    "accessed_on": "2026-09-11",
+    "used_for": "原始视频和状态更新，区别早期 token 发布"
+  },
+  {
+    "id": 52,
+    "title": "Teleop-GR1 current README",
+    "publisher": "NVIDIA",
+    "publication_date_or_version": "固定 revision 9f68429，2026-02-14",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1/blob/9f68429ad12535d30d1aae33b7945c79c830c8c4/README.md",
+    "accessed_on": "2026-09-11",
+    "used_for": "当前内容 DreamDojo 与 CC BY-NC；作为版本异常证据"
+  },
+  {
+    "id": 53,
+    "title": "DROID RSS paper",
+    "publisher": "Khazatsky et al.",
+    "publication_date_or_version": "RSS 2024",
+    "url": "https://www.jiajunwu.com/papers/droid_rss.pdf",
+    "accessed_on": "2026-09-11",
+    "used_for": "数据集与 CC BY 4.0 声明"
+  },
+  {
+    "id": 54,
+    "title": "Using RoboCasa Datasets",
+    "publisher": "RoboCasa Team",
+    "publication_date_or_version": "2026 当前文档",
+    "url": "https://github.com/robocasa/robocasa/blob/main/docs/datasets/using_datasets.md",
+    "accessed_on": "2026-09-11",
+    "used_for": "LeRobot 下载和 human/MimicGen 划分"
+  },
+  {
+    "id": 55,
+    "title": "Open-H-Embodiment README",
+    "publisher": "NVIDIA / Open-H-Embodiment contributors",
+    "publication_date_or_version": "2026-02 创建，持续更新",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment",
+    "accessed_on": "2026-09-11",
+    "used_for": "H 为 healthcare，与工业人形不同"
+  },
+  {
+    "id": 56,
+    "title": "G1 apple task lookup",
+    "publisher": "NVIDIA GEAR",
+    "publication_date_or_version": "固定 revision 0d7bdd0，2025-06-11",
+    "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/blob/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/tasks.jsonl",
+    "accessed_on": "2026-09-11",
+    "used_for": "实际读取 task_index=1 的语言"
+  },
+  {
+    "id": 57,
+    "title": "OpenVLA project page",
+    "publisher": "OpenVLA Team",
+    "publication_date_or_version": "2024",
+    "url": "https://openvla.github.io/",
+    "accessed_on": "2026-09-11",
+    "used_for": "架构与 64 A100 / 15 天的历史预训练规模"
+  }
+]

@@ -1,0 +1,435 @@
+{
+  "accessed_on": "2026-09-11",
+  "records": [
+    {
+      "dataset_id": "nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "inspection": "metadata only; G1 single-episode numeric inspection recorded separately",
+      "metadata": {
+        "codebase_version": "v2.1",
+        "robot_type": null,
+        "fps": 20,
+        "total_episodes": 311,
+        "total_frames": 29864
+      },
+      "features": {
+        "observation.images.ego_view": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.state": {
+          "dtype": "float64",
+          "shape": [
+            43
+          ]
+        },
+        "action": {
+          "dtype": "float64",
+          "shape": [
+            43
+          ]
+        },
+        "observation.img_state_delta": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "timestamp": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "frame_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "episode_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "task_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "dataset_id": "unitreerobotics/G1_Dex1_Clean_Table",
+      "inspection": "metadata only; G1 single-episode numeric inspection recorded separately",
+      "metadata": {
+        "codebase_version": "v2.1",
+        "robot_type": "G1_ALL",
+        "fps": 30,
+        "total_episodes": 200,
+        "total_frames": 265701
+      },
+      "features": {
+        "observation.left_arm": {
+          "dtype": "float32",
+          "shape": [
+            7
+          ]
+        },
+        "observation.right_arm": {
+          "dtype": "float32",
+          "shape": [
+            7
+          ]
+        },
+        "observation.left_gripper": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "observation.right_gripper": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "observation.left_ee": {
+          "dtype": "float32",
+          "shape": [
+            6
+          ]
+        },
+        "observation.right_ee": {
+          "dtype": "float32",
+          "shape": [
+            6
+          ]
+        },
+        "observation.body": {
+          "dtype": "float32",
+          "shape": [
+            29
+          ]
+        },
+        "action.left_arm": {
+          "dtype": "float32",
+          "shape": [
+            7
+          ]
+        },
+        "action.right_arm": {
+          "dtype": "float32",
+          "shape": [
+            7
+          ]
+        },
+        "action.left_gripper": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "action.right_gripper": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "action.left_ee": {
+          "dtype": "float32",
+          "shape": [
+            6
+          ]
+        },
+        "action.right_ee": {
+          "dtype": "float32",
+          "shape": [
+            6
+          ]
+        },
+        "action.body": {
+          "dtype": "float32",
+          "shape": [
+            7
+          ]
+        },
+        "observation.images.cam_left_high": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.images.cam_right_high": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.images.cam_left_wrist": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.images.cam_right_wrist": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "timestamp": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "frame_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "episode_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "task_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "dataset_id": "unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher",
+      "inspection": "metadata only; G1 single-episode numeric inspection recorded separately",
+      "metadata": {
+        "codebase_version": "v3.0",
+        "robot_type": "unitree_g1",
+        "fps": 30,
+        "total_episodes": 300,
+        "total_frames": 426897
+      },
+      "features": {
+        "observation.images.head_stereo_left": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.images.head_stereo_right": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.images.wrist_left": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.images.wrist_right": {
+          "dtype": "video",
+          "shape": [
+            480,
+            640,
+            3
+          ]
+        },
+        "observation.state.ee_state": {
+          "dtype": "float32",
+          "shape": [
+            12
+          ]
+        },
+        "observation.state.hand_state": {
+          "dtype": "float32",
+          "shape": [
+            12
+          ]
+        },
+        "observation.state.robot_q_current": {
+          "dtype": "float32",
+          "shape": [
+            36
+          ]
+        },
+        "action.ee_action": {
+          "dtype": "float32",
+          "shape": [
+            12
+          ]
+        },
+        "action.hand_cmd": {
+          "dtype": "float32",
+          "shape": [
+            12
+          ]
+        },
+        "action.robot_q_desired": {
+          "dtype": "float32",
+          "shape": [
+            36
+          ]
+        },
+        "timestamp": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "frame_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "episode_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "task_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "dataset_id": "lerobot/abc_130k_v3_smoke",
+      "inspection": "metadata only; G1 single-episode numeric inspection recorded separately",
+      "metadata": {
+        "codebase_version": "v3.0",
+        "robot_type": "yam_bimanual",
+        "fps": 30,
+        "total_episodes": 85,
+        "total_frames": 313094
+      },
+      "features": {
+        "observation.state": {
+          "dtype": "float32",
+          "shape": [
+            14
+          ]
+        },
+        "action": {
+          "dtype": "float32",
+          "shape": [
+            14
+          ]
+        },
+        "observation.images.top": {
+          "dtype": "video",
+          "shape": [
+            224,
+            224,
+            3
+          ]
+        },
+        "observation.images.left_wrist": {
+          "dtype": "video",
+          "shape": [
+            224,
+            224,
+            3
+          ]
+        },
+        "observation.images.right_wrist": {
+          "dtype": "video",
+          "shape": [
+            224,
+            224,
+            3
+          ]
+        },
+        "timestamp": {
+          "dtype": "float32",
+          "shape": [
+            1
+          ]
+        },
+        "frame_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "episode_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "task_index": {
+          "dtype": "int64",
+          "shape": [
+            1
+          ]
+        },
+        "language_persistent": {
+          "dtype": "language",
+          "shape": [
+            1
+          ]
+        },
+        "language_events": {
+          "dtype": "language",
+          "shape": [
+            1
+          ]
+        }
+      }
+    }
+  ]
+}

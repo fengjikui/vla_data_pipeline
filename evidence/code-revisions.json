@@ -1,0 +1,46 @@
+{
+  "accessed_on": "2026-09-11",
+  "scope": "Public metadata/revision lookup, not full dataset validation",
+  "records": [
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "committed_at": "2026-08-24T16:27:12Z",
+      "sha": "215abfb217dbac7d5f1273282331b9b1866c0479"
+    },
+    {
+      "repo": "NVIDIA/Isaac-GR00T",
+      "committed_at": "2026-08-20T21:25:42Z",
+      "sha": "51d4c89f72fda44cbf77285c6a8114b52676b8a1"
+    },
+    {
+      "repo": "huggingface/lerobot",
+      "committed_at": "2026-09-10T14:51:34Z",
+      "sha": "b6ec0060779550c0a157ae34feb89e0cf86012a8"
+    },
+    {
+      "repo": "unitreerobotics/xr_teleoperate",
+      "committed_at": "2026-09-07T03:34:58Z",
+      "sha": "817fb00c63cde15e5f24a0f8fa08e1e33ed89d3b"
+    },
+    {
+      "repo": "unitreerobotics/unifolm-vla",
+      "committed_at": "2026-01-29T09:35:48Z",
+      "sha": "ff6c39aeb0454cfb95418c66aef40ca777f935c1"
+    },
+    {
+      "repo": "RoboTwin-Platform/RoboTwin",
+      "committed_at": "2026-09-05T08:06:21Z",
+      "sha": "96c1feab536306b50c26af200044fcdf126e8904"
+    },
+    {
+      "repo": "robocasa/robocasa",
+      "committed_at": "2026-09-02T03:53:54Z",
+      "sha": "4f8a2980def75a55dff96b990745b83540425f09"
+    },
+    {
+      "repo": "AgibotTech/genie_sim",
+      "committed_at": "2026-09-07T12:05:56Z",
+      "sha": "6ca11c7593ecf6b7dae58c28fd19f4a789a0dd46"
+    }
+  ]
+}

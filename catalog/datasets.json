@@ -1,0 +1,717 @@
+{
+  "schema_version": "0.1-research-catalog",
+  "as_of": "2026-09-11",
+  "notes": [
+    "Priority is a lab onboarding recommendation, not a quality ranking.",
+    "Open access is separate from commercial usage rights.",
+    "Rows may overlap; do not sum scales.",
+    "This catalog is not the implemented pipeline schema."
+  ],
+  "datasets": [
+    {
+      "id": "agibot-world-2025",
+      "name": "AgiBot World Alpha / Beta",
+      "publisher": "AgiBot / OpenDriveLab",
+      "priority": "P1",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "Alpha 92,214；Beta 1,003,672；Alpha 是 Beta 子集",
+      "format": "raw release + LeRobot conversion",
+      "action_semantics_summary": "multi-arm, end-effector, embodiment-specific",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-NC-SA-4.0",
+      "research_value": "大规模真实多任务双臂",
+      "limitations": "不代表双足全身技能",
+      "source_ids": [
+        5
+      ],
+      "entry_url": "https://github.com/OpenDriveLab/AgiBot-World",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "agibot-world-2026",
+      "name": "AgiBot World 2026",
+      "publisher": "AgiBot World",
+      "priority": "P1",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body",
+        "mobile_manipulation"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation",
+        "autonomous_rollout",
+        "human_intervention"
+      ],
+      "scale_statement": "按主题与任务包，未验收总轨迹量",
+      "format": "extended LeRobot v2.1 archives",
+      "action_semantics_summary": "G2 joint/body commands; inspect field_descriptions",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-NC-SA-4.0",
+      "research_value": "长任务、多层标注、交互与接管",
+      "limitations": "RL 目录不自动满足所有 RL 算法字段",
+      "source_ids": [
+        6
+      ],
+      "entry_url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "galaxea-open-world",
+      "name": "Galaxea Open-World Dataset",
+      "publisher": "OpenGalaxea",
+      "priority": "P1",
+      "embodiments": [
+        "arm",
+        "wheeled_mobile_manipulation"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "500+ hours；227 task archives（当前卡）",
+      "format": "LeRobot v2.1",
+      "action_semantics_summary": "arm joint targets + grippers + chassis/torso twist",
+      "access_status": "gated_auto",
+      "license_summary": "CC-BY-NC-SA-4.0",
+      "research_value": "移动双臂、多层语言",
+      "limitations": "不提供双足步态等价监督",
+      "source_ids": [
+        8
+      ],
+      "entry_url": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "robomind-1",
+      "name": "RoboMIND 1.x",
+      "publisher": "X-Humanoid and collaborators",
+      "priority": "P1",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "初版 107k / 479 tasks；版本增长需重算",
+      "format": "HDF5 archives",
+      "action_semantics_summary": "per-embodiment action mapping",
+      "access_status": "gated_auto",
+      "license_summary": "Apache-2.0 (current card)",
+      "research_value": "多本体、单臂和双臂",
+      "limitations": "不要合并 1.x 与 2.0 总量",
+      "source_ids": [
+        9,
+        49
+      ],
+      "entry_url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "robomind-2",
+      "name": "RoboMIND 2.0",
+      "publisher": "Beijing Innovation Center of Humanoid Robotics / PKU",
+      "priority": "P1",
+      "embodiments": [
+        "arm",
+        "humanoid",
+        "mobile_manipulation"
+      ],
+      "collection_environment": [
+        "real",
+        "simulation"
+      ],
+      "collection_method": [
+        "teleoperation",
+        "simulation_generation"
+      ],
+      "scale_statement": "310k+ real；12k tactile / 20k mobile included；20k sim additional",
+      "format": "per-package format; full archives not inspected",
+      "action_semantics_summary": "per-embodiment mapping; tactile subset separate",
+      "access_status": "official_download_login",
+      "license_summary": "Apache-2.0 (ModelScope card; package review pending)",
+      "research_value": "接触、移动双臂、真仿配对",
+      "limitations": "公开统计未经全量验收",
+      "source_ids": [
+        10,
+        11
+      ],
+      "entry_url": "https://log2r.github.io/RoboMIND2.0/",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "unitree-g1-dex1",
+      "name": "Unitree G1 Dex1 task series",
+      "publisher": "Unitree Robotics",
+      "priority": "P0",
+      "embodiments": [
+        "humanoid_upper_body"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "Clean_Table checked metadata: 200 episodes",
+      "format": "LeRobot v2.1 in checked task",
+      "action_semantics_summary": "split left/right arm + gripper + body commands",
+      "access_status": "public_download",
+      "license_summary": "Apache-2.0 (checked task)",
+      "research_value": "上身动作读取与复现",
+      "limitations": "同系列逐个确认格式／手型",
+      "source_ids": [
+        14
+      ],
+      "entry_url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Clean_Table/tree/80a9d440fbd5366899b5875db5a9db11f1e7857c",
+      "verified_on": "2026-09-11",
+      "verification_level": "metadata inspected; trajectory files not parsed"
+    },
+    {
+      "id": "unitree-g1-wbt",
+      "name": "Unitree UnifoLM WBT",
+      "publisher": "Unitree Robotics",
+      "priority": "P0",
+      "embodiments": [
+        "humanoid_whole_body"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "BrainCo dishwasher task checked metadata: 300 episodes",
+      "format": "LeRobot v3.0",
+      "action_semantics_summary": "root xyz+wxyz + 29 joints; hand commands separate",
+      "access_status": "public_download",
+      "license_summary": "Apache-2.0 (checked task)",
+      "research_value": "全身参考、手型与根部语义",
+      "limitations": "36 dimensions are not 36 joints",
+      "source_ids": [
+        15,
+        16
+      ],
+      "entry_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher/blob/16c01dbfcb2159783ea575acd42d1cec9b69e311/README.md",
+      "verified_on": "2026-09-11",
+      "verification_level": "metadata inspected; trajectory files not parsed"
+    },
+    {
+      "id": "rh20t",
+      "name": "RH20T",
+      "publisher": "Shanghai Jiao Tong University",
+      "priority": "P1",
+      "embodiments": [
+        "arm"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation",
+        "paired_human_demonstration"
+      ],
+      "scale_statement": "110k+ sequences (official)",
+      "format": "MP4 + NumPy + JSON + calibration",
+      "action_semantics_summary": "TCP/joint/gripper/force per configuration",
+      "access_status": "public_download",
+      "license_summary": "dataset terms require confirmation",
+      "research_value": "接触丰富、多模态",
+      "limitations": "指尖触觉只在特定配置",
+      "source_ids": [
+        24
+      ],
+      "entry_url": "https://rh20t.github.io/",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "nvidia-g1-teleop",
+      "name": "PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "publisher": "NVIDIA GEAR",
+      "priority": "P0",
+      "embodiments": [
+        "humanoid_upper_body"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "card: 1,000; four subset metadata declarations sum to 1,095; no full deduplication/episode audit",
+      "format": "actual LeRobot v2.1; card says HDF5",
+      "action_semantics_summary": "43-dimensional joint targets including hands",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-4.0",
+      "research_value": "小样本验证与人形上身",
+      "limitations": "未检查视频同步；不能外推全库质量",
+      "source_ids": [
+        12,
+        13
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "verified_on": "2026-09-11",
+      "verification_level": "metadata plus one numeric episode parsed; no video validation"
+    },
+    {
+      "id": "nvidia-x-sim",
+      "name": "PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "publisher": "NVIDIA",
+      "priority": "P0",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body",
+        "humanoid_mobile_manipulation"
+      ],
+      "collection_environment": [
+        "simulation"
+      ],
+      "collection_method": [
+        "simulation_generation"
+      ],
+      "scale_statement": "9k bimanual / 240k tabletop / 24k downsampled / 72k arm / 102 G1 loco",
+      "format": "LeRobot task folders",
+      "action_semantics_summary": "per-embodiment action mapping",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-4.0",
+      "research_value": "装配与多本体模拟闭环",
+      "limitations": "降采样组不是独立新增；多数不是走路",
+      "source_ids": [
+        17
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "abc-130k",
+      "name": "ABC-130k",
+      "publisher": "XDOF / ABC collaborators",
+      "priority": "P1",
+      "embodiments": [
+        "arm_bimanual"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "pinned card: 130,703 episodes / 3,590.7 hours / 42,980 annotated",
+      "format": "MCAP + annotation MCAP",
+      "action_semantics_summary": "2x6-DoF arm commands + normalized gripper aperture",
+      "access_status": "gated_auto",
+      "license_summary": "Apache-2.0",
+      "research_value": "双臂原始日志和细粒度标注",
+      "limitations": "与 LeRobot 转换版重叠",
+      "source_ids": [
+        25
+      ],
+      "entry_url": "https://huggingface.co/datasets/XDOF/ABC-130k/blob/75ca0b88bda489f2bd935d72454593ecb90efb52/README.md",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "abc-v3-smoke",
+      "name": "ABC LeRobot v3 smoke",
+      "publisher": "Hugging Face LeRobot (conversion of XDOF data)",
+      "priority": "P0",
+      "embodiments": [
+        "arm_bimanual"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "metadata checked: 85 episodes / 313,094 frames",
+      "format": "LeRobot v3.0",
+      "action_semantics_summary": "14-dimensional bimanual action/state",
+      "access_status": "public_download",
+      "license_summary": "Apache-2.0 (card; retain upstream attribution)",
+      "research_value": "v3 reader smoke validation",
+      "limitations": "不是新的独立数据集；裁剪编码与原始不同",
+      "source_ids": [
+        50,
+        25
+      ],
+      "entry_url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/blob/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/meta/info.json",
+      "verified_on": "2026-09-11",
+      "verification_level": "metadata inspected; trajectory files not parsed"
+    },
+    {
+      "id": "one-x-worldmodel",
+      "name": "1X World Model Challenge data",
+      "publisher": "1X Technologies",
+      "priority": "P2",
+      "embodiments": [
+        "wheeled_humanoid"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "robot_operation"
+      ],
+      "scale_statement": "100+ hours; release-stage specific",
+      "format": "video tokens + actions; later raw video/state release",
+      "action_semantics_summary": "EVE action/state; release-specific",
+      "access_status": "public_download",
+      "license_summary": "Apache-2.0 early release; check raw variants",
+      "research_value": "世界模型与动作条件预测",
+      "limitations": "不是最新 NEO 全量 VLA 数据",
+      "source_ids": [
+        26,
+        51
+      ],
+      "entry_url": "https://github.com/1x-technologies/1xgpt",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "egodex",
+      "name": "EgoDex",
+      "publisher": "Apple",
+      "priority": "P2",
+      "embodiments": [
+        "human"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "human_demonstration"
+      ],
+      "scale_statement": "829 hours (official)",
+      "format": "video + 3D pose annotations",
+      "action_semantics_summary": "human pose; no direct robot motor commands",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-NC-ND (dataset)",
+      "research_value": "人体手部先验、动作重定向",
+      "limitations": "机器人 BC 需要额外动作对应和权利确认",
+      "source_ids": [
+        22
+      ],
+      "entry_url": "https://github.com/apple/ml-egodex",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "umi",
+      "name": "UMI task data and collection system",
+      "publisher": "Stanford / Columbia / TRI",
+      "priority": "P1",
+      "embodiments": [
+        "handheld_gripper",
+        "arm",
+        "bimanual"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "handheld_demonstration"
+      ],
+      "scale_statement": "task-package specific; no pooled total",
+      "format": "task-specific video/trajectory pipeline",
+      "action_semantics_summary": "relative end-effector trajectory + gripper",
+      "access_status": "project_download_links",
+      "license_summary": "check each data package",
+      "research_value": "机器人未确定时的夹爪操作采集",
+      "limitations": "依赖轨迹估计、时延与目标控制器",
+      "source_ids": [
+        23
+      ],
+      "entry_url": "https://umi-gripper.github.io/",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "oxe",
+      "name": "Open X-Embodiment",
+      "publisher": "DeepMind / multi-institution collaboration",
+      "priority": "P1",
+      "embodiments": [
+        "multi_embodiment"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "mixed"
+      ],
+      "scale_statement": "evolving aggregate; see component spreadsheet",
+      "format": "RLDS / TFDS",
+      "action_semantics_summary": "heterogeneous, per-dataset semantic transforms",
+      "access_status": "public_component_links",
+      "license_summary": "component-specific licenses",
+      "research_value": "多本体预训练与数据配方",
+      "limitations": "与组成数据、派生版本不能相加",
+      "source_ids": [
+        1
+      ],
+      "entry_url": "https://github.com/google-deepmind/open_x_embodiment",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "droid",
+      "name": "DROID",
+      "publisher": "DROID Dataset Team",
+      "priority": "P0",
+      "embodiments": [
+        "arm"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation"
+      ],
+      "scale_statement": "76k episodes / 350 hours / 564 scenes (project)",
+      "format": "RLDS; raw MP4 + HDF5 + JSON",
+      "action_semantics_summary": "action_dict includes several command representations",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-4.0",
+      "research_value": "Franka 多场景与 openpi 适配",
+      "limitations": "action convenience-vector comment needs source-code verification",
+      "source_ids": [
+        2,
+        3,
+        53
+      ],
+      "entry_url": "https://droid-dataset.github.io/",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "bridge-v2",
+      "name": "BridgeData V2",
+      "publisher": "Berkeley RAIL and collaborators",
+      "priority": "P1",
+      "embodiments": [
+        "arm"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "teleoperation",
+        "scripted_policy"
+      ],
+      "scale_statement": "60,096 = 50,365 teleop + 9,731 scripted",
+      "format": "raw JPEG/trajectory; RLDS/LeRobot derivatives",
+      "action_semantics_summary": "WidowX action convention; conversion-dependent",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-4.0",
+      "research_value": "基础操作和语言条件",
+      "limitations": "不同转换版本不能当独立数据",
+      "source_ids": [
+        4
+      ],
+      "entry_url": "https://rail-berkeley.github.io/bridgedata/",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "robotwin-2",
+      "name": "RoboTwin 2.0",
+      "publisher": "RoboTwin Team",
+      "priority": "P0",
+      "embodiments": [
+        "arm_bimanual"
+      ],
+      "collection_environment": [
+        "simulation"
+      ],
+      "collection_method": [
+        "scripted_planning",
+        "simulation_generation"
+      ],
+      "scale_statement": "100k+ precollected (official)",
+      "format": "HDF5 / current XPolicyLab / LeRobot conversion",
+      "action_semantics_summary": "config-dependent dual-arm action",
+      "access_status": "public_download_and_generator",
+      "license_summary": "code/data/assets must be checked separately",
+      "research_value": "双臂随机化与目标本体生成",
+      "limitations": "仿真高分不保证真实收益",
+      "source_ids": [
+        18,
+        45
+      ],
+      "entry_url": "https://github.com/RoboTwin-Platform/RoboTwin",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "robocasa365",
+      "name": "RoboCasa365",
+      "publisher": "RoboCasa Team",
+      "priority": "P1",
+      "embodiments": [
+        "arm",
+        "mobile_manipulation"
+      ],
+      "collection_environment": [
+        "simulation"
+      ],
+      "collection_method": [
+        "teleoperation",
+        "MimicGen"
+      ],
+      "scale_statement": "365 tasks / 2,200+ demonstration hours",
+      "format": "LeRobot current release",
+      "action_semantics_summary": "configured robot/controller action",
+      "access_status": "public_download_and_generator",
+      "license_summary": "CC-BY-4.0 datasets/assets per project; code MIT",
+      "research_value": "长任务、移动操作仿真",
+      "limitations": "厨房分布不等于工业分布",
+      "source_ids": [
+        19,
+        54
+      ],
+      "entry_url": "https://github.com/robocasa/robocasa",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "libero",
+      "name": "LIBERO",
+      "publisher": "LIBERO Team",
+      "priority": "P0",
+      "embodiments": [
+        "arm"
+      ],
+      "collection_environment": [
+        "simulation"
+      ],
+      "collection_method": [
+        "demonstration"
+      ],
+      "scale_statement": "benchmark suite/version specific",
+      "format": "simulation demos; modified RLDS derivatives",
+      "action_semantics_summary": "task/controller-specific arm + gripper",
+      "access_status": "public_download",
+      "license_summary": "verify data package; code license not substituted",
+      "research_value": "训练与闭环评测起点",
+      "limitations": "固定原版/modified版本，不能与实机成功率混用",
+      "source_ids": [
+        43
+      ],
+      "entry_url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "genie-sim-3",
+      "name": "Genie Sim 3.0 data",
+      "publisher": "AGIBOT",
+      "priority": "P1/P2",
+      "embodiments": [
+        "arm",
+        "humanoid"
+      ],
+      "collection_environment": [
+        "simulation"
+      ],
+      "collection_method": [
+        "simulation_generation"
+      ],
+      "scale_statement": "10,000+ hours vendor claim; not independently inventoried",
+      "format": "release archives; HF mixes data and checkpoints",
+      "action_semantics_summary": "task/embodiment-specific",
+      "access_status": "public_mixed_artifacts",
+      "license_summary": "HF license metadata absent; verify package terms",
+      "research_value": "智元生态真仿路线",
+      "limitations": "不能将工具／模型文件算作轨迹或默认统一授权",
+      "source_ids": [
+        20,
+        21
+      ],
+      "entry_url": "https://www.agibot.com/article/231/detail/29.html",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "nvidia-gr1-current",
+      "name": "Teleop-GR1 current repository",
+      "publisher": "NVIDIA",
+      "priority": "P2/HOLD",
+      "embodiments": [
+        "mixed"
+      ],
+      "collection_environment": [
+        "real"
+      ],
+      "collection_method": [
+        "mixed"
+      ],
+      "scale_statement": "not adopted: current README is DreamDojo",
+      "format": "mixed LeRobot directories",
+      "action_semantics_summary": "must be established per subset",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-NC-4.0 current card",
+      "research_value": "版本与内容漂移案例",
+      "limitations": "不能按历史名称推断整库内容与许可",
+      "source_ids": [
+        52
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1/blob/9f68429ad12535d30d1aae33b7945c79c830c8c4/README.md",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    },
+    {
+      "id": "open-h-excluded",
+      "name": "Open-H-Embodiment",
+      "publisher": "NVIDIA / healthcare contributors",
+      "priority": "OUT_OF_SCOPE",
+      "embodiments": [
+        "healthcare_robotics"
+      ],
+      "collection_environment": [
+        "real",
+        "simulation"
+      ],
+      "collection_method": [
+        "mixed"
+      ],
+      "scale_statement": "not prioritized for factory use",
+      "format": "LeRobot v2.1",
+      "action_semantics_summary": "healthcare task-specific kinematics",
+      "access_status": "public_download",
+      "license_summary": "CC-BY-4.0 card; component review still relevant",
+      "research_value": "展示数据命名需核对",
+      "limitations": "H means healthcare, not industrial humanoid",
+      "source_ids": [
+        55
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment",
+      "verified_on": "2026-09-11",
+      "verification_level": "official_publication_or_metadata; full data not validated"
+    }
+  ]
+}

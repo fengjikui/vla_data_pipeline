@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+.venv/
+.pytest_cache/
+data/
+downloads/
+checkpoints/
+*.parquet
+*.mp4
+*.mcap
+*.h5
+*.hdf5

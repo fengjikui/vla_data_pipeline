@@ -1,0 +1,301 @@
+{
+  "accessed_on": "2026-09-11",
+  "scope": "Public metadata/revision lookup, not full dataset validation",
+  "records": [
+    {
+      "id": "nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "sha": "0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40",
+      "lastModified": "2025-06-11T12:06:26.000Z",
+      "gated": false,
+      "private": false,
+      "license": "cc-by-4.0",
+      "file_count": 2212,
+      "metadata_files": [
+        "g1-pick-apple/meta/info.json",
+        "g1-pick-grapes/meta/info.json",
+        "g1-pick-pear/meta/info.json",
+        "g1-pick-starfruit/meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "README.md",
+        "g1-pick-apple/data/chunk-000/episode_000000.parquet",
+        "g1-pick-apple/data/chunk-000/episode_000001.parquet",
+        "g1-pick-apple/data/chunk-000/episode_000002.parquet",
+        "g1-pick-apple/data/chunk-000/episode_000003.parquet",
+        "g1-pick-apple/data/chunk-000/episode_000004.parquet",
+        "g1-pick-apple/data/chunk-000/episode_000005.parquet"
+      ],
+      "parquet_examples": [
+        "g1-pick-apple/data/chunk-000/episode_000000.parquet",
+        "g1-pick-apple/data/chunk-000/episode_000001.parquet"
+      ]
+    },
+    {
+      "id": "nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1",
+      "sha": "9f68429ad12535d30d1aae33b7945c79c830c8c4",
+      "lastModified": "2026-02-14T15:30:12.000Z",
+      "gated": false,
+      "private": false,
+      "license": "cc-by-nc-4.0",
+      "file_count": 48671,
+      "metadata_files": [
+        "DreamDojo-HV_Eval/meta/info.json",
+        "EgoDex_Eval/meta/info.json",
+        "GR1_robot/meta/info.json",
+        "In-lab_Eval/gr1_unified.color_puzzles_robot/meta/info.json",
+        "In-lab_Eval/gr1_unified.fold_cloth_long_robot/meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000000.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000001.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000002.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000003.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000004.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000005.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000006.parquet"
+      ],
+      "parquet_examples": [
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000000.parquet",
+        "DreamDojo-HV_Eval/data/chunk-000/episode_000001.parquet"
+      ]
+    },
+    {
+      "id": "nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "sha": "ea7ac0b68f87da62f1e726771bba0fe74300802f",
+      "lastModified": "2026-03-05T23:36:40.000Z",
+      "gated": false,
+      "private": false,
+      "license": "cc-by-4.0",
+      "file_count": 97956,
+      "metadata_files": [
+        "bimanual_panda_gripper.Threading/meta/info.json",
+        "bimanual_panda_gripper.ThreePieceAssembly/meta/info.json",
+        "bimanual_panda_gripper.Transport/meta/info.json",
+        "bimanual_panda_hand.BoxCleanup/meta/info.json",
+        "bimanual_panda_hand.DrawerCleanup/meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "README.md",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000000.parquet",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000001.parquet",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000002.parquet",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000003.parquet",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000004.parquet",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000005.parquet"
+      ],
+      "parquet_examples": [
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000000.parquet",
+        "bimanual_panda_gripper.Threading/data/chunk-000/episode_000001.parquet"
+      ]
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Clean_Table",
+      "sha": "80a9d440fbd5366899b5875db5a9db11f1e7857c",
+      "lastModified": "2026-01-29T02:49:58.000Z",
+      "gated": false,
+      "private": false,
+      "license": "apache-2.0",
+      "file_count": 1006,
+      "metadata_files": [
+        "meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "README.md",
+        "data/chunk-000/episode_000000.parquet",
+        "data/chunk-000/episode_000001.parquet",
+        "data/chunk-000/episode_000002.parquet",
+        "data/chunk-000/episode_000003.parquet",
+        "data/chunk-000/episode_000004.parquet",
+        "data/chunk-000/episode_000005.parquet"
+      ],
+      "parquet_examples": [
+        "data/chunk-000/episode_000000.parquet",
+        "data/chunk-000/episode_000001.parquet"
+      ]
+    },
+    {
+      "id": "unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher",
+      "sha": "16c01dbfcb2159783ea575acd42d1cec9b69e311",
+      "lastModified": "2026-03-27T12:04:41.000Z",
+      "gated": false,
+      "private": false,
+      "license": "apache-2.0",
+      "file_count": 114,
+      "metadata_files": [
+        "meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "README.md",
+        "data/chunk-000/file-000.parquet",
+        "data/chunk-000/file-001.parquet",
+        "data/chunk-000/file-002.parquet",
+        "meta/episodes/chunk-000/file-000.parquet",
+        "meta/info.json",
+        "meta/stats.json"
+      ],
+      "parquet_examples": [
+        "data/chunk-000/file-000.parquet",
+        "data/chunk-000/file-001.parquet"
+      ]
+    },
+    {
+      "id": "XDOF/ABC-130k",
+      "sha": "75ca0b88bda489f2bd935d72454593ecb90efb52",
+      "lastModified": "2026-08-29T02:05:25.000Z",
+      "gated": "auto",
+      "private": false,
+      "license": "apache-2.0",
+      "file_count": 0,
+      "metadata_files": [],
+      "first_files": [],
+      "parquet_examples": []
+    },
+    {
+      "id": "lerobot/abc_130k_v3_smoke",
+      "sha": "b342a0ff262195d49bae3eece6e3f40c6e1dbe15",
+      "lastModified": "2026-06-24T12:59:03.000Z",
+      "gated": false,
+      "private": false,
+      "license": "apache-2.0",
+      "file_count": 25,
+      "metadata_files": [
+        "meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "README.md",
+        "data/chunk-000/file-000.parquet",
+        "meta/episodes/chunk-000/file-000.parquet",
+        "meta/info.json",
+        "meta/stats.json",
+        "meta/tasks.parquet",
+        "videos/observation.images.left_wrist/chunk-000/file-000.mp4"
+      ],
+      "parquet_examples": [
+        "data/chunk-000/file-000.parquet",
+        "meta/episodes/chunk-000/file-000.parquet"
+      ]
+    },
+    {
+      "id": "OpenGalaxea/Galaxea-Open-World-Dataset",
+      "sha": "df670d8dc3f2b369f55d28a3428b8639f0dab37d",
+      "lastModified": "2026-04-17T06:26:22.000Z",
+      "gated": "auto",
+      "private": false,
+      "license": "cc-by-nc-sa-4.0",
+      "file_count": 231,
+      "metadata_files": [
+        "lerobot_info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "README.md",
+        "demo.mp4",
+        "lerobot/Adjust_The_Air_Conditioner_Temperature_20250711_006.tar.gz",
+        "lerobot/Arrange_Fruits_20250819_011.tar.gz",
+        "lerobot/Arrange_Mineral_Water_Bottles_On_The_Desk_20250721_008.tar.gz",
+        "lerobot/Arrange_Sofa_Cushions_20250708_006.tar.gz",
+        "lerobot/Arrange_Sofa_Cushions_20250804_012.tar.gz"
+      ],
+      "parquet_examples": []
+    },
+    {
+      "id": "x-humanoid-robomind/RoboMIND",
+      "sha": "e7ffe31d1fe983a42c3d7b79d192f554fc05b86e",
+      "lastModified": "2026-04-14T08:07:26.000Z",
+      "gated": "auto",
+      "private": false,
+      "license": "apache-2.0",
+      "file_count": 3081,
+      "metadata_files": [],
+      "first_files": [
+        ".gitattributes",
+        "1.txt",
+        "README.md",
+        "benchmark1_0_compressed/h5_agilex_3rgb/10_packplate.tar.gz.part-aa",
+        "benchmark1_0_compressed/h5_agilex_3rgb/10_packplate.tar.gz.part-ab",
+        "benchmark1_0_compressed/h5_agilex_3rgb/10_packplate_2.tar.gz.part-aa",
+        "benchmark1_0_compressed/h5_agilex_3rgb/10_packplate_2.tar.gz.part-ab",
+        "benchmark1_0_compressed/h5_agilex_3rgb/11_brushcup.tar.gz.part-aa"
+      ],
+      "parquet_examples": []
+    },
+    {
+      "id": "agibot-world/AgiBotWorld2026",
+      "sha": "cf9841dffaa4bb6a7b226a30b145e4fa5127a064",
+      "lastModified": "2026-09-01T05:54:04.000Z",
+      "gated": false,
+      "private": false,
+      "license": "cc-by-nc-sa-4.0",
+      "file_count": 420,
+      "metadata_files": [],
+      "first_files": [
+        ".gitattributes",
+        "ImitationLearning/CommercialSpaces/task_3400/313498_314085.tar.gz",
+        "ImitationLearning/CommercialSpaces/task_3400/314096_314575.tar.gz",
+        "ImitationLearning/CommercialSpaces/task_3400/314576_315886.tar.gz",
+        "ImitationLearning/CommercialSpaces/task_3400/315903_317024.tar.gz",
+        "ImitationLearning/CommercialSpaces/task_3400/317029_317933.tar.gz",
+        "ImitationLearning/CommercialSpaces/task_3400/346206_347749.tar.gz",
+        "ImitationLearning/CommercialSpaces/task_3401/352507_353983.tar.gz"
+      ],
+      "parquet_examples": []
+    },
+    {
+      "id": "agibot-world/GenieSim3.0-Dataset",
+      "sha": "0369966c70a7fd98dbc3ad767224365e1469691d",
+      "lastModified": "2026-09-07T09:27:14.000Z",
+      "gated": false,
+      "private": false,
+      "license": null,
+      "file_count": 315,
+      "metadata_files": [],
+      "first_files": [
+        ".gitattributes",
+        "checkpoints/instruction_and_robust_acot/_CHECKPOINT_METADATA",
+        "checkpoints/instruction_and_robust_acot/assets/norm_stats.json",
+        "checkpoints/instruction_and_robust_acot/params/_METADATA",
+        "checkpoints/instruction_and_robust_acot/params/_sharding",
+        "checkpoints/instruction_and_robust_acot/params/array_metadatas/process_0",
+        "checkpoints/instruction_and_robust_acot/params/d/4a51e7ee3d538c0454470f2bf9f151ce",
+        "checkpoints/instruction_and_robust_acot/params/manifest.ocdbt"
+      ],
+      "parquet_examples": []
+    },
+    {
+      "id": "nvidia/PhysicalAI-Robotics-Open-H-Embodiment",
+      "sha": "291c0bc2d95dc1ebb3051b2e058d2422e5b97fda",
+      "lastModified": "2026-09-09T19:04:08.000Z",
+      "gated": false,
+      "private": false,
+      "license": "cc-by-4.0",
+      "file_count": 89450,
+      "metadata_files": [
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/meta/info.json",
+        "Endoscopy/cuhk/openh_dataset_full/find_lesser_curvature/meta/info.json",
+        "Endoscopy/cuhk/openh_dataset_full/find_pyloric_antrum/meta/info.json",
+        "Endoscopy/cuhk/openh_dataset_full/track_orange_lesion/meta/info.json",
+        "Endoscopy/cuhk/openh_dataset_full/track_small_round_nodule/meta/info.json"
+      ],
+      "first_files": [
+        ".gitattributes",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/README.md",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000000.parquet",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000001.parquet",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000002.parquet",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000003.parquet",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000004.parquet",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000005.parquet"
+      ],
+      "parquet_examples": [
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000000.parquet",
+        "Endoscopy/cuhk/openh_dataset_full/find_greater_curvature/data/chunk-000/episode_000001.parquet"
+      ]
+    }
+  ]
+}
