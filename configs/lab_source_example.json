@@ -1,0 +1,13 @@
+{
+  "id": "lab_robot_a",
+  "label": "请替换为真实采集来源",
+  "format": "lab_json_v1",
+  "revision": "batch-001",
+  "embodiment": "replace_with_robot_and_controller_version",
+  "origin_namespace": "lab_original_collection",
+  "license": "replace_with_actual_internal_rights_record",
+  "semantics_status": "unknown",
+  "environment": "real",
+  "collection": "teleoperation",
+  "episode_files": ["episode-000.json"]
+}

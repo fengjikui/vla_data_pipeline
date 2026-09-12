@@ -1,0 +1,26 @@
+name: Cross-platform data contracts
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  contracts:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          python-version: '3.12'
+      - run: uv sync --frozen --extra dev
+      - run: uv run --frozen --extra dev pytest -q --junitxml=reports/ci-tests.xml
+      - run: uv run --frozen vla-pipeline --help
+      - run: uv build --wheel
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-${{ matrix.os }}
+          path: reports/ci-tests.xml

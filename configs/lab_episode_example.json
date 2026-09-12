@@ -1,0 +1,14 @@
+{
+  "_note": "教学占位样例，不能作为真实数据训练；将实采完整轨迹写到 incoming/episode-000.json，提供真实视频。",
+  "episode_id": "episode-000",
+  "origin_group": "lab_original_collection:session-001:episode-000",
+  "fps": 20,
+  "video": "camera.mp4",
+  "video_offset": 0,
+  "success": null,
+  "alignment_assumption": "请替换为实际时钟、同步和延迟说明",
+  "steps": [
+    {"timestamp": 0.0, "state": [0.1, 0.2], "action": [0.12, 0.22], "language": "请替换为真实任务"},
+    {"timestamp": 0.05, "state": [0.11, 0.21], "action": [0.13, 0.23], "language": "请替换为真实任务"}
+  ]
+}

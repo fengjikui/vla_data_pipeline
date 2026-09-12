@@ -1,0 +1,337 @@
+{
+  "inspection_date": "2026-09-12",
+  "sample_scope": "First 6 episodes per source; one camera; v3 shared files contain additional unselected episodes. No whole-dataset audit.",
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "action_type": "source_joint_targets",
+      "camera": "observation.images.ego_view",
+      "collection": "teleoperation",
+      "embodiment": "unitree_g1_43",
+      "environment": "real",
+      "episodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "files": [
+        {
+          "bytes": 3614,
+          "path": "README.md",
+          "sha256": "8e6d6e153d3bb1d2f07b30c427093e85abc5e4a1ed3b8413382cb030fe494ee7",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/README.md"
+        },
+        {
+          "bytes": 5989,
+          "path": "g1-pick-apple/meta/info.json",
+          "sha256": "c1d7dcbfe9a88fab2d9a845fb48a31fae5cfb1ea04c1eb65fe5b3e9871eb0ccd",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/info.json"
+        },
+        {
+          "bytes": 320,
+          "path": "g1-pick-apple/meta/tasks.jsonl",
+          "sha256": "8c2e7205428de7a3eb5fdad4924bea024948084c99def1398d569c0b7a68b67d",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/tasks.jsonl"
+        },
+        {
+          "bytes": 30802,
+          "path": "g1-pick-apple/meta/episodes.jsonl",
+          "sha256": "7335eec60c94fba3c037dcb45c9e238dd112e3720765c6cc3ba03475f6f7cd12",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/episodes.jsonl"
+        },
+        {
+          "bytes": 1388,
+          "path": "g1-pick-apple/meta/modality.json",
+          "sha256": "005bfe0b851e8d811b2a6fa4aa025d53116d28cadc8671b2f1c6a9fafb88e752",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/meta/modality.json"
+        },
+        {
+          "bytes": 65601,
+          "path": "g1-pick-apple/data/chunk-000/episode_000000.parquet",
+          "sha256": "a0d5b462c5d27a7378b4bef68cbd6fdfcd85c5c033f5e9bd2abca47fe67fa22d",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/data/chunk-000/episode_000000.parquet"
+        },
+        {
+          "bytes": 439124,
+          "path": "g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000000.mp4",
+          "sha256": "311e95d47dd3038b6a2bf6c03b2c67248fc3e9d9c533b0de91fec86caedd1264",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000000.mp4"
+        },
+        {
+          "bytes": 68302,
+          "path": "g1-pick-apple/data/chunk-000/episode_000001.parquet",
+          "sha256": "93545d70234bb9f5a75794fe2f8ecbb9a380087f99f6cca8762c4139ebfd8418",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/data/chunk-000/episode_000001.parquet"
+        },
+        {
+          "bytes": 476767,
+          "path": "g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000001.mp4",
+          "sha256": "7aae93123811ed1bc06626938fefa65665837918aa07e3a235faf0b215f9cbf9",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000001.mp4"
+        },
+        {
+          "bytes": 62541,
+          "path": "g1-pick-apple/data/chunk-000/episode_000002.parquet",
+          "sha256": "970199ef7b57004f3b33da123a457354311382fa4ba596da1bbdce02b5e72c3c",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/data/chunk-000/episode_000002.parquet"
+        },
+        {
+          "bytes": 400439,
+          "path": "g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000002.mp4",
+          "sha256": "ca7edea9d94606df21eac6efde92f565300030d026da467d312edb9ca3da1312",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000002.mp4"
+        },
+        {
+          "bytes": 64806,
+          "path": "g1-pick-apple/data/chunk-000/episode_000003.parquet",
+          "sha256": "72a782ff25cfc69278278baebe48147925e5caa5257f9a7876429295fd8f3a53",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/data/chunk-000/episode_000003.parquet"
+        },
+        {
+          "bytes": 409762,
+          "path": "g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000003.mp4",
+          "sha256": "0838dab1eaabbf9c942b53e2c228ad121b70deb87efd92ef216a8b28054d5562",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000003.mp4"
+        },
+        {
+          "bytes": 69706,
+          "path": "g1-pick-apple/data/chunk-000/episode_000004.parquet",
+          "sha256": "f4f92f49ab14b50ee77f723804aa795da0aed72ee99fc8b37de7631c0c5b67a8",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/data/chunk-000/episode_000004.parquet"
+        },
+        {
+          "bytes": 474198,
+          "path": "g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000004.mp4",
+          "sha256": "1fedd523613da77b860ab44e776c76d9f3a450db893b040f1d25f425b9971b2e",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000004.mp4"
+        },
+        {
+          "bytes": 67410,
+          "path": "g1-pick-apple/data/chunk-000/episode_000005.parquet",
+          "sha256": "dc5b25e2577d4286ef52fe50b425b8159ceeeb6a86c2abf3ddc0081e3fa4efc9",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/data/chunk-000/episode_000005.parquet"
+        },
+        {
+          "bytes": 461657,
+          "path": "g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000005.mp4",
+          "sha256": "36f0f55b549de157f3edfaa361b9897fdf23891c482eae543a1aea1fabbd8263",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1/resolve/0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40/g1-pick-apple/videos/chunk-000/observation.images.ego_view/episode_000005.mp4"
+        }
+      ],
+      "format": "lerobot_v2",
+      "fps": 20,
+      "id": "g1_real",
+      "label": "真实人形 G1 上身遥操作",
+      "license": "CC-BY-4.0",
+      "origin_namespace": "nvidia-g1-apple",
+      "repo": "nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "revision": "0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40",
+      "semantic_note": "43 named joints retained. Position target interpretation requires controller confirmation. Upper-body demonstrations do not establish locomotion skill.",
+      "semantics_status": "partial",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "subset": "g1-pick-apple",
+      "units": "source_native_unverified"
+    },
+    {
+      "action_type": "source_native_14d",
+      "camera": "observation.images.top",
+      "collection": "teleoperation",
+      "embodiment": "yam_bimanual_14",
+      "environment": "real",
+      "episodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "files": [
+        {
+          "bytes": 6414,
+          "path": "README.md",
+          "sha256": "e6dc844a2dcccd97a35950d8bf1dc6a7fe06f2ed543264cba73d968e6c8bbd11",
+          "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/resolve/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/README.md"
+        },
+        {
+          "bytes": 5495,
+          "path": "meta/info.json",
+          "sha256": "f864788011d75cdfaf4a98cb21510a4c094ebdc5428e04c0a08053ad6ee56e6e",
+          "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/resolve/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/meta/info.json"
+        },
+        {
+          "bytes": 2055,
+          "path": "meta/tasks.parquet",
+          "sha256": "9e9497cf6dfc0b3e394181ca71cc2022f6003ddbbd36205abafdcbec360a1f0e",
+          "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/resolve/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/meta/tasks.parquet"
+        },
+        {
+          "bytes": 333233,
+          "path": "meta/episodes/chunk-000/file-000.parquet",
+          "sha256": "0173474d384630d6d5c6d5f3a08acb9f3b6a07e7d47fbb4a70e1296173711088",
+          "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/resolve/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/meta/episodes/chunk-000/file-000.parquet"
+        },
+        {
+          "bytes": 41113004,
+          "path": "data/chunk-000/file-000.parquet",
+          "sha256": "58789e78935f601f419b71b70b587ddfe893e7e91e501899d015817af60935a1",
+          "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/resolve/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/data/chunk-000/file-000.parquet"
+        },
+        {
+          "bytes": 160555796,
+          "path": "videos/observation.images.top/chunk-000/file-000.mp4",
+          "sha256": "0e8bb3da0f9dd2cec3ebb84934c5a373ad67f7d70347c203becff47aea7d20b7",
+          "url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/resolve/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/videos/observation.images.top/chunk-000/file-000.mp4"
+        }
+      ],
+      "format": "lerobot_v3",
+      "fps": 30,
+      "id": "abc_real",
+      "label": "真实双臂 YAM 遥操作",
+      "license": "Apache-2.0",
+      "origin_namespace": "abc130k-smoke",
+      "repo": "lerobot/abc_130k_v3_smoke",
+      "revision": "b342a0ff262195d49bae3eece6e3f40c6e1dbe15",
+      "semantic_note": "14 native dimensions retained. Original ABC episode lineage and gripper/controller semantics need upstream confirmation before cross-source mixing or deployment.",
+      "semantics_status": "partial",
+      "source_url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke",
+      "subset": "",
+      "units": "source_native_unverified"
+    },
+    {
+      "action_type": "source_controller_action_14d",
+      "camera": "observation.images.front_view",
+      "collection": "source_sim_demonstrations",
+      "embodiment": "panda_sim_state32_action14",
+      "environment": "simulation",
+      "episodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "files": [
+        {
+          "bytes": 6876,
+          "path": "README.md",
+          "sha256": "cfcbb2c6b229f39a8e293fb43ed0ab33f1ad7cadba3bcc363fbb60a5c62bc862",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/README.md"
+        },
+        {
+          "bytes": 4705,
+          "path": "bimanual_panda_gripper.Threading/meta/info.json",
+          "sha256": "a7a33b4c8b369ecac39525fda072625872bf1b1ade146e2fc32599c9822660a1",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/meta/info.json"
+        },
+        {
+          "bytes": 108,
+          "path": "bimanual_panda_gripper.Threading/meta/tasks.jsonl",
+          "sha256": "e673499382439aa5534a2848bd361e67352d0436dcb01280d3649eaa7d40b7fa",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/meta/tasks.jsonl"
+        },
+        {
+          "bytes": 166890,
+          "path": "bimanual_panda_gripper.Threading/meta/episodes.jsonl",
+          "sha256": "81ca928dbeeecfdfa096340bc521545ed95587dcb48e957be64691e961ba8b0f",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/meta/episodes.jsonl"
+        },
+        {
+          "bytes": 2069,
+          "path": "bimanual_panda_gripper.Threading/meta/modality.json",
+          "sha256": "f69b2501801f6e436e1ec4b3f2905967fa8a7dbe7be2f10c850027af2d5d1baf",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/meta/modality.json"
+        },
+        {
+          "bytes": 88526,
+          "path": "bimanual_panda_gripper.Threading/data/chunk-000/episode_000000.parquet",
+          "sha256": "53597fe74268fdc8252959fc3aa51cc31ba8ea0531afd492a26e05b225156bd2",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/data/chunk-000/episode_000000.parquet"
+        },
+        {
+          "bytes": 1037599,
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000000.mp4",
+          "sha256": "7f26f205284c9a4e0cc07f6f61e0b72e9326ad17d7f56641c8f0ced6b18e9a73",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000000.mp4"
+        },
+        {
+          "bytes": 87542,
+          "path": "bimanual_panda_gripper.Threading/data/chunk-000/episode_000001.parquet",
+          "sha256": "5794cf7cb612e5dc16a750af076f754b42f528b1145fb0f2f99e9f515754f13b",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/data/chunk-000/episode_000001.parquet"
+        },
+        {
+          "bytes": 1035401,
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000001.mp4",
+          "sha256": "57836598ba8d233e6e191b8256e9b1ff6dd592d288e9564986bb3299e0354c15",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000001.mp4"
+        },
+        {
+          "bytes": 130379,
+          "path": "bimanual_panda_gripper.Threading/data/chunk-000/episode_000002.parquet",
+          "sha256": "1b1d0593ee724f8e4c5c959c6ef9c0e674a7a7103260c548f9e025d11f892f6f",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/data/chunk-000/episode_000002.parquet"
+        },
+        {
+          "bytes": 1144178,
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000002.mp4",
+          "sha256": "e85e3e3aa37dc0f5fe18bd36cadb1a47bd44d3745b83ec5593a3c85b9439b2e0",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000002.mp4"
+        },
+        {
+          "bytes": 94201,
+          "path": "bimanual_panda_gripper.Threading/data/chunk-000/episode_000003.parquet",
+          "sha256": "94f7cb007779ad1be2d2cb51218683519632e7ea3886cc067d773510194fd151",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/data/chunk-000/episode_000003.parquet"
+        },
+        {
+          "bytes": 1054146,
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000003.mp4",
+          "sha256": "6ea55d7fb168702683b247b43bcd93a1c9f85214537258fa2bd3184a82aba26b",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000003.mp4"
+        },
+        {
+          "bytes": 94109,
+          "path": "bimanual_panda_gripper.Threading/data/chunk-000/episode_000004.parquet",
+          "sha256": "4d5ee2dbbe809abb86f91fa4ef9099bcc2ccdb8380b029438a4e76d5b487d196",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/data/chunk-000/episode_000004.parquet"
+        },
+        {
+          "bytes": 1041422,
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000004.mp4",
+          "sha256": "ef6882046d113856699601bce2600ed145408f17446c1ab04956b18866e5f721",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000004.mp4"
+        },
+        {
+          "bytes": 95799,
+          "path": "bimanual_panda_gripper.Threading/data/chunk-000/episode_000005.parquet",
+          "sha256": "4939f8a462689f4d0579e9fc5fc78409d15760578ea83653cc62b6e8ebba09a8",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/data/chunk-000/episode_000005.parquet"
+        },
+        {
+          "bytes": 1030162,
+          "path": "bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000005.mp4",
+          "sha256": "8f4ec992174361ec96c9fae1a7b8f6dce4497d70c6c56032d215d24e77412737",
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/resolve/ea7ac0b68f87da62f1e726771bba0fe74300802f/bimanual_panda_gripper.Threading/videos/chunk-000/observation.images.front_view/episode_000005.mp4"
+        }
+      ],
+      "format": "lerobot_v2",
+      "fps": 20.0,
+      "id": "panda_sim",
+      "label": "仿真双臂 Panda 穿引任务",
+      "license": "CC-BY-4.0",
+      "origin_namespace": "nvidia-panda-threading",
+      "repo": "nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "revision": "ea7ac0b68f87da62f1e726771bba0fe74300802f",
+      "semantic_note": "State 32 / action 14 are not interchangeable. Generic motor labels do not establish joint-space meaning; simulator controller mapping still needs verification.",
+      "semantics_status": "partial",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "subset": "bimanual_panda_gripper.Threading",
+      "units": "source_native_unverified"
+    }
+  ]
+}

@@ -10,3 +10,10 @@ checkpoints/
 *.mcap
 *.h5
 *.hdf5
+runs/
+.build/
+node_modules/
+*.pt
+*.npz
+dist/
+reports/*tests.xml
