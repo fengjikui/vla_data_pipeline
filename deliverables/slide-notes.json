@@ -1,0 +1,66 @@
+[
+  {
+    "title": "工业具身智能：VLA 数据预研与管线工程验证",
+    "note": "建议用时 30 秒。今天汇报分三部分：对 VLA 数据的认识、我们已经跑通的数据工程验证，以及下一阶段需要的场景与资源。实验室还在探索工业具身智能，这次交付先建立可复用的数据基础。来源：docs/06-supervisor-brief.md。"
+  },
+  {
+    "title": "本次交付与阶段结论",
+    "note": "建议用时 50 秒。核心结论是，在机器人和任务尚未确定时，数据接入和验证仍能推进。我们已经完成真实数据到训练窗口和小模型反向传播的工程链路。还没有完成预训练 VLA 微调或机器人任务验证。后续最需要工厂入口与目标控制接口。来源：reports/acceptance.json；reports/training_probe.json。"
+  },
+  {
+    "title": "VLA 的输入、输出与数据监督",
+    "note": "建议用时 60 秒。我有 LLM 基础，可以把 VLA 理解为利用视觉、语言和状态来预测动作的模型。动作可用离散 token、连续回归或生成式动作头。机器人状态和动作需要单位、坐标、时间与控制器定义。本次小模型用来检查数据接口，没有预训练视觉语言骨干。来源：docs/01-vla-data-research.md；https://github.com/openvla/openvla；https://github.com/Physical-Intelligence/openpi。"
+  },
+  {
+    "title": "数据分类的四个独立维度",
+    "note": "建议用时 45 秒。不要把这四项视为互斥的桶。一个公开数据集可以是真实环境中遥操作采集、后来以商业授权形式提供。分类的目的，是判断获取条件和训练价值。来源：docs/01-vla-data-research.md。"
+  },
+  {
+    "title": "数据资产清单与下载顺序",
+    "note": "建议用时 60 秒。已经整理 24 项数据条目及 57 项来源，其中有暂缓和排除项。对于后续下载，应先选任务、本体、动作和访问条件，再扩量。本页是代表入口，不是质量排名。完整的获取清单在 docs/11-download-priorities.md。来源：https://droid-dataset.github.io/；https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke；https://github.com/OpenDriveLab/AgiBot-World；https://huggingface.co/datasets/unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher；https://github.com/RoboTwin-Platform/RoboTwin。"
+  },
+  {
+    "title": "三类数据的真实接入结果",
+    "note": "建议用时 50 秒。本次只取每个来源 6 条轨迹、一路相机。真实双臂任务是卷领带，G1 是拿苹果，仿真是双臂穿引，它们用于验证文件与训练接口，不能代替集团工位。状态和动作维度不同，原型没有进行不可靠的跨本体转换。窗口数受采样间隔与数量上限影响，不能据此比较来源价值。来源：configs/demo_sources.lock.json；reports/acceptance.json。"
+  },
+  {
+    "title": "图像与动作记录共同组成示范",
+    "note": "建议用时 40 秒。让主管看见数据中的真实图像，动作则在对应数值文件中。这里都是固定版本原始视频帧提取，没有生成式图像。G1 展示上身桌面操作，不是负载行走。图像出处与许可：reports/image_attribution.json；NVIDIA G1 和 X-Embodiment-Sim 为 CC-BY-4.0；ABC v3 smoke 为 Apache-2.0。"
+  },
+  {
+    "title": "数据管线的三个层次",
+    "note": "建议用时 60 秒。原始层保存文件和哈希，规范层保存完整数字轨迹及来源，训练视图负责图像取样、语言、动作块、mask 和统计。输出是特定训练程序使用的接口视图。新格式第一次需要适配，同契约新批次可以复用。来源：src/vla_pipeline/pipeline.py；docs/03-pipeline-design.md。"
+  },
+  {
+    "title": "实际发现：一行数据包含未来语言",
+    "note": "建议用时 60 秒。这是本次真实发现：ABC 一行存着整段语言标注，若直接拼接，会把未来阶段提前给模型。这是针对带生效时间的阶段标签；任务开始前本来已知的完整指令并不自动构成泄漏。现在只取当前时刻已经生效的阶段标注。图像也只选过去帧。这个验证依赖源时间，设备时钟与实际延迟仍需标定。来源：data/raw/abc_real 的固定版本 episode 0；src/vla_pipeline/readers.py；tests/test_contracts.py。"
+  },
+  {
+    "title": "异常隔离与数据发布验收",
+    "note": "建议用时 50 秒。原始样本 18 条均通过当前工程检查；我们另造了异常变体来测试规则：错误时间、NaN、缺少视频被隔离，重复副本被跳过。注入错误比例不代表原始数据质量。来源：reports/acceptance.json；scripts/verify_delivery.py。"
+  },
+  {
+    "title": "小模型训练接口的实测结果",
+    "note": "建议用时 60 秒。每组单独训练一个随机初始化的小网络，实际输入图像、语言和状态，监督是 8 步动作。CPU 跑 120 步，有限梯度、检查点和优化器恢复通过。训练误差下降只说明拟合；仿真组验证误差仍高，提醒我们不能把训练链路正常等同于泛化或机器人成功。不同来源的归一化尺度不同，不能直接排优劣。来源：reports/training_probe.json；src/vla_pipeline/training.py。"
+  },
+  {
+    "title": "公司环境迁移与平台适配",
+    "note": "建议用时 45 秒。公司实际落地优先 Ubuntu 服务器，并兼容 Windows。代码和数据契约跨平台，运行库和 wheel 需要按系统准备。Mac 虚拟环境不能直接复制。当前提供校验包和离线模式，两平台 CI 已实际通过 21 项测试；CI 是合成契约测试，真实服务器的编解码、GPU 和内网环境仍要复验。来源：docs/10-linux-windows-offline-deployment.md；https://docs.astral.sh/uv/concepts/projects/layout/。"
+  },
+  {
+    "title": "机械臂与人形的并行验证路线",
+    "note": "建议用时 60 秒。机械臂与人形保持同等研究深度，数据管理共用，控制适配分别做。机械臂先分拣和上下料，再讨论接触；人形先静止双臂，再增加移动、负载和稳定性验证。需要现场真实条件与控制接口参与，而不是只凭已有数据定采购。来源：docs/05-lab-roadmap.md。"
+  },
+  {
+    "title": "建议的四周检查点",
+    "note": "建议用时 60 秒。建议四周按检查点推进：任务与接口清楚、上游模型能够微调、固定任务有完整试验、数据增加有对照。资源和设备未确定，所以这是工作安排，不是工业达标日期。来源：docs/06-supervisor-brief.md。"
+  },
+  {
+    "title": "需要主管确认与协调的事项",
+    "note": "建议用时 45 秒。希望主管确认下一阶段先完成一个候选任务的模型和评测闭环，协调一到两个现场联系人，明确现有机器人、GPU 和人员资源，并设置两周复盘。我们负责形成技术证据，业务现场定义价值和合格标准，主管决定投入优先级。来源：docs/06-supervisor-brief.md。"
+  },
+  {
+    "title": "交付包与后续工作",
+    "note": "建议用时 20 秒。交付包已经覆盖调研、可运行管线、实测记录和迁移说明。下一阶段用真实任务连接模型与机器人能力。可现场打开离线报告，或者运行演示手册中的缓存重跑命令。来源：README.md；docs/08-demo-runbook.md。"
+  }
+]

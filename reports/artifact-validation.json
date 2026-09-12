@@ -1,0 +1,16 @@
+{
+  "verified_at": "2026-09-12",
+  "slides": 16,
+  "editable_native_tables": 10,
+  "speaker_note_pages": 16,
+  "pptx_package_layout_import": "passed",
+  "pdf_visual_review": "All 16 final rendered pages reviewed; no missing Chinese glyphs, clipping or overlap",
+  "pdf_text_extraction": "all 16 pages passed",
+  "html_validation": "3 embedded PNGs; no external scripts/fonts; matching evidence release; browser visual check unavailable because local-file navigation is blocked",
+  "sha256": {
+    "VLA数据预研与管线验证-主管汇报.pptx": "10591ab220d4499fa7013f2c5d73b5a3449e3cee55cf3492dada7dc2f0b2c708",
+    "VLA数据预研与管线验证-主管汇报.pdf": "1cd3b7a9e4a8936ef894c1bd8747550b151dc1367717c9d232d2232cf067d2d7",
+    "offline-report.html": "02b4c296f28be0beccf688ecb48dbb803337bda0dde4dbbd3cb31d89244313fd",
+    "speaker-notes.md": "a432bd712a7708a292f5c0390bb08bbe842ae7f698249afff3374f8a9370317f"
+  }
+}

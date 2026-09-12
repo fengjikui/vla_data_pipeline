@@ -1,0 +1,22 @@
+{
+  "local": "macOS ARM64, Python 3.12, 21 passed",
+  "ci_run": "https://github.com/fengjikui/vla_data_pipeline/actions/runs/34678405092",
+  "ci_suites": [
+    {
+      "platform": "results-ubuntu-24.04",
+      "tests": "21",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.817"
+    },
+    {
+      "platform": "results-windows-latest",
+      "tests": "21",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.000"
+    }
+  ]
+}

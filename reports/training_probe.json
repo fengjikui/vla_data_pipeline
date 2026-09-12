@@ -1,0 +1,301 @@
+{
+  "device": "cpu",
+  "machine": "arm64",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "purpose": "Validate RGB, time-filtered language, state, masked action chunks, gradients and checkpoint I/O. NOT pretrained VLA fine-tuning or robot capability evaluation.",
+  "python": "3.12.13",
+  "release_id": "d6c42e269fafb49808f8863b",
+  "results": [
+    {
+      "checkpoint_file": "g1_real.pt",
+      "checkpoint_reload_max_abs_error": 0.0,
+      "checkpoint_sha256": "3eca3b2ac4c64416d01ecf829a8212c5b9f63435370696f89bde35dacfb4b418",
+      "curve": [
+        {
+          "batch_masked_mse": 0.7954085469245911,
+          "step": 1
+        },
+        {
+          "batch_masked_mse": 0.5027925372123718,
+          "step": 11
+        },
+        {
+          "batch_masked_mse": 0.4316655397415161,
+          "step": 21
+        },
+        {
+          "batch_masked_mse": 0.2772008180618286,
+          "step": 31
+        },
+        {
+          "batch_masked_mse": 0.2027231603860855,
+          "step": 41
+        },
+        {
+          "batch_masked_mse": 0.13566800951957703,
+          "step": 51
+        },
+        {
+          "batch_masked_mse": 0.10062143206596375,
+          "step": 61
+        },
+        {
+          "batch_masked_mse": 0.09510203450918198,
+          "step": 71
+        },
+        {
+          "batch_masked_mse": 0.08072426170110703,
+          "step": 81
+        },
+        {
+          "batch_masked_mse": 0.07554084062576294,
+          "step": 91
+        },
+        {
+          "batch_masked_mse": 0.07126658409833908,
+          "step": 101
+        },
+        {
+          "batch_masked_mse": 0.07031521201133728,
+          "step": 111
+        },
+        {
+          "batch_masked_mse": 0.06581330299377441,
+          "step": 120
+        }
+      ],
+      "final_train_masked_mse": 0.05463217943906784,
+      "finite_gradients": true,
+      "initial_train_masked_mse": 0.9665988683700562,
+      "input_shapes": {
+        "image": [
+          49,
+          3,
+          64,
+          64
+        ],
+        "mask": [
+          49,
+          8,
+          43
+        ],
+        "state": [
+          49,
+          43
+        ],
+        "target": [
+          49,
+          8,
+          43
+        ],
+        "tokens": [
+          49,
+          192
+        ]
+      },
+      "model": "TinyMultimodalBC_random_init",
+      "optimizer_state_restored": true,
+      "parameters": 46552,
+      "source_id": "g1_real",
+      "train_samples": 49,
+      "validation_masked_mse": 0.606890082359314,
+      "validation_samples": 26,
+      "wall_seconds": 1.074
+    },
+    {
+      "checkpoint_file": "abc_real.pt",
+      "checkpoint_reload_max_abs_error": 0.0,
+      "checkpoint_sha256": "5e5aa38851b8a9cc09b9cba43aefbd77ee9539fcd4cecdf7a120f47ad41e8847",
+      "curve": [
+        {
+          "batch_masked_mse": 0.8843955397605896,
+          "step": 1
+        },
+        {
+          "batch_masked_mse": 0.7841387987136841,
+          "step": 11
+        },
+        {
+          "batch_masked_mse": 0.41668328642845154,
+          "step": 21
+        },
+        {
+          "batch_masked_mse": 0.2817288041114807,
+          "step": 31
+        },
+        {
+          "batch_masked_mse": 0.16732355952262878,
+          "step": 41
+        },
+        {
+          "batch_masked_mse": 0.13651181757450104,
+          "step": 51
+        },
+        {
+          "batch_masked_mse": 0.1620253324508667,
+          "step": 61
+        },
+        {
+          "batch_masked_mse": 0.11926323920488358,
+          "step": 71
+        },
+        {
+          "batch_masked_mse": 0.10975375026464462,
+          "step": 81
+        },
+        {
+          "batch_masked_mse": 0.08499041944742203,
+          "step": 91
+        },
+        {
+          "batch_masked_mse": 0.10506030172109604,
+          "step": 101
+        },
+        {
+          "batch_masked_mse": 0.08116750419139862,
+          "step": 111
+        },
+        {
+          "batch_masked_mse": 0.0754615068435669,
+          "step": 120
+        }
+      ],
+      "final_train_masked_mse": 0.07448988407850266,
+      "finite_gradients": true,
+      "initial_train_masked_mse": 1.0856406688690186,
+      "input_shapes": {
+        "image": [
+          256,
+          3,
+          64,
+          64
+        ],
+        "mask": [
+          256,
+          8,
+          14
+        ],
+        "state": [
+          256,
+          14
+        ],
+        "target": [
+          256,
+          8,
+          14
+        ],
+        "tokens": [
+          256,
+          192
+        ]
+      },
+      "model": "TinyMultimodalBC_random_init",
+      "optimizer_state_restored": true,
+      "parameters": 21264,
+      "source_id": "abc_real",
+      "train_samples": 256,
+      "validation_masked_mse": 0.14190715551376343,
+      "validation_samples": 128,
+      "wall_seconds": 1.134
+    },
+    {
+      "checkpoint_file": "panda_sim.pt",
+      "checkpoint_reload_max_abs_error": 0.0,
+      "checkpoint_sha256": "79183829abacb3aced24ff1d649176a7552761024e193343645dcee428b9175e",
+      "curve": [
+        {
+          "batch_masked_mse": 1.3357089757919312,
+          "step": 1
+        },
+        {
+          "batch_masked_mse": 0.9107835292816162,
+          "step": 11
+        },
+        {
+          "batch_masked_mse": 0.8473870158195496,
+          "step": 21
+        },
+        {
+          "batch_masked_mse": 0.7188171148300171,
+          "step": 31
+        },
+        {
+          "batch_masked_mse": 0.7708791494369507,
+          "step": 41
+        },
+        {
+          "batch_masked_mse": 0.46643826365470886,
+          "step": 51
+        },
+        {
+          "batch_masked_mse": 0.5786677002906799,
+          "step": 61
+        },
+        {
+          "batch_masked_mse": 0.48287099599838257,
+          "step": 71
+        },
+        {
+          "batch_masked_mse": 0.46122047305107117,
+          "step": 81
+        },
+        {
+          "batch_masked_mse": 0.45888951420783997,
+          "step": 91
+        },
+        {
+          "batch_masked_mse": 0.6023650169372559,
+          "step": 101
+        },
+        {
+          "batch_masked_mse": 0.453473836183548,
+          "step": 111
+        },
+        {
+          "batch_masked_mse": 0.5538658499717712,
+          "step": 120
+        }
+      ],
+      "final_train_masked_mse": 0.456102579832077,
+      "finite_gradients": true,
+      "initial_train_masked_mse": 1.0354211330413818,
+      "input_shapes": {
+        "image": [
+          102,
+          3,
+          64,
+          64
+        ],
+        "mask": [
+          102,
+          8,
+          14
+        ],
+        "state": [
+          102,
+          32
+        ],
+        "target": [
+          102,
+          8,
+          14
+        ],
+        "tokens": [
+          102,
+          192
+        ]
+      },
+      "model": "TinyMultimodalBC_random_init",
+      "optimizer_state_restored": true,
+      "parameters": 22992,
+      "source_id": "panda_sim",
+      "train_samples": 102,
+      "validation_masked_mse": 1.0561593770980835,
+      "validation_samples": 29,
+      "wall_seconds": 1.078
+    }
+  ],
+  "seed": 7,
+  "steps_per_source": 120,
+  "torch": "2.14.0"
+}

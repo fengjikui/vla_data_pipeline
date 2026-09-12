@@ -1,0 +1,582 @@
+{
+  "as_of": "2026-09-12",
+  "policy": "Index broadly, download small representative samples; acquire larger data on approved company systems. Sample sizes are proposed budgets, not quality guarantees.",
+  "records": [
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body"
+      ],
+      "entry_url": "https://github.com/OpenDriveLab/AgiBot-World",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "raw release + LeRobot conversion",
+      "id": "agibot-world-2025",
+      "license": "CC-BY-NC-SA-4.0",
+      "limitations": "不代表双足全身技能",
+      "name": "AgiBot World Alpha / Beta",
+      "purpose": "大规模真实多任务双臂",
+      "reported_scale": "Alpha 92,214；Beta 1,003,672；Alpha 是 Beta 子集",
+      "sample_plan": "按任务与本体选择；Alpha 是 Beta 子集，避免重复",
+      "source_ids": [
+        5
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body",
+        "mobile_manipulation"
+      ],
+      "entry_url": "https://huggingface.co/datasets/agibot-world/AgiBotWorld2026",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "extended LeRobot v2.1 archives",
+      "id": "agibot-world-2026",
+      "license": "CC-BY-NC-SA-4.0",
+      "limitations": "RL 目录不自动满足所有 RL 算法字段",
+      "name": "AgiBot World 2026",
+      "purpose": "长任务、多层标注、交互与接管",
+      "reported_scale": "按主题与任务包，未验收总轨迹量",
+      "sample_plan": "先取与候选工位相关的单个 task archive",
+      "source_ids": [
+        6
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "gated_auto",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "wheeled_mobile_manipulation"
+      ],
+      "entry_url": "https://huggingface.co/datasets/OpenGalaxea/Galaxea-Open-World-Dataset",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot v2.1",
+      "id": "galaxea-open-world",
+      "license": "CC-BY-NC-SA-4.0",
+      "limitations": "不提供双足步态等价监督",
+      "name": "Galaxea Open-World Dataset",
+      "purpose": "移动双臂、多层语言",
+      "reported_scale": "500+ hours；227 task archives（当前卡）",
+      "sample_plan": "单个轮式双臂任务 archive；先核验许可与 gated 条件",
+      "source_ids": [
+        8
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "gated_auto",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body"
+      ],
+      "entry_url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "HDF5 archives",
+      "id": "robomind-1",
+      "license": "Apache-2.0 (current card)",
+      "limitations": "不要合并 1.x 与 2.0 总量",
+      "name": "RoboMIND 1.x",
+      "purpose": "多本体、单臂和双臂",
+      "reported_scale": "初版 107k / 479 tasks；版本增长需重算",
+      "sample_plan": "单一本体、单任务样包；取得 gated 访问后核验动作契约",
+      "source_ids": [
+        9,
+        49
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "official_download_login",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "humanoid",
+        "mobile_manipulation"
+      ],
+      "entry_url": "https://log2r.github.io/RoboMIND2.0/",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "per-package format; full archives not inspected",
+      "id": "robomind-2",
+      "license": "Apache-2.0 (ModelScope card; package review pending)",
+      "limitations": "公开统计未经全量验收",
+      "name": "RoboMIND 2.0",
+      "purpose": "接触、移动双臂、真仿配对",
+      "reported_scale": "310k+ real；12k tactile / 20k mobile included；20k sim additional",
+      "sample_plan": "若研究接触／移动，选择对应传感器子集；不要全量打包",
+      "source_ids": [
+        10,
+        11
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "humanoid_upper_body"
+      ],
+      "entry_url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Clean_Table/tree/80a9d440fbd5366899b5875db5a9db11f1e7857c",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot v2.1 in checked task",
+      "id": "unitree-g1-dex1",
+      "license": "Apache-2.0 (checked task)",
+      "limitations": "同系列逐个确认格式／手型",
+      "name": "Unitree G1 Dex1 task series",
+      "purpose": "上身动作读取与复现",
+      "reported_scale": "Clean_Table checked metadata: 200 episodes",
+      "sample_plan": "先选一个整理任务，取元数据与 10 条完整 episode",
+      "source_ids": [
+        14
+      ],
+      "stage": "第一批候选"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "humanoid_whole_body"
+      ],
+      "entry_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher/blob/16c01dbfcb2159783ea575acd42d1cec9b69e311/README.md",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot v3.0",
+      "id": "unitree-g1-wbt",
+      "license": "Apache-2.0 (checked task)",
+      "limitations": "36 dimensions are not 36 joints",
+      "name": "Unitree UnifoLM WBT",
+      "purpose": "全身参考、手型与根部语义",
+      "reported_scale": "BrainCo dishwasher task checked metadata: 300 episodes",
+      "sample_plan": "一个明确手型与全身控制配置，先取元数据和 10 条完整 episode",
+      "source_ids": [
+        15,
+        16
+      ],
+      "stage": "第一批候选"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm"
+      ],
+      "entry_url": "https://rh20t.github.io/",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "MP4 + NumPy + JSON + calibration",
+      "id": "rh20t",
+      "license": "dataset terms require confirmation",
+      "limitations": "指尖触觉只在特定配置",
+      "name": "RH20T",
+      "purpose": "接触丰富、多模态",
+      "reported_scale": "110k+ sequences (official)",
+      "sample_plan": "仅选择包含所需力／触觉的配置；先取时间同步与标定样包",
+      "source_ids": [
+        24
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "humanoid_upper_body"
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "existing_parser_support": "本次所锁定子集已实测",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "actual LeRobot v2.1; card says HDF5",
+      "id": "nvidia-g1-teleop",
+      "license": "CC-BY-4.0",
+      "limitations": "未检查视频同步；不能外推全库质量",
+      "name": "PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "purpose": "小样本验证与人形上身",
+      "reported_scale": "card: 1,000; four subset metadata declarations sum to 1,095; no full deduplication/episode audit",
+      "sample_plan": "本机已固定 6 条 episode、一路相机；迁移清单即可，不再扩量",
+      "source_ids": [
+        12,
+        13
+      ],
+      "stage": "已做小样本验证"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "humanoid_upper_body",
+        "humanoid_mobile_manipulation"
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "existing_parser_support": "本次所锁定子集已实测",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot task folders",
+      "id": "nvidia-x-sim",
+      "license": "CC-BY-4.0",
+      "limitations": "降采样组不是独立新增；多数不是走路",
+      "name": "PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+      "purpose": "装配与多本体模拟闭环",
+      "reported_scale": "9k bimanual / 240k tabletop / 24k downsampled / 72k arm / 102 G1 loco",
+      "sample_plan": "本机已固定 6 条 episode、一路相机；迁移清单即可，不再扩量",
+      "source_ids": [
+        17
+      ],
+      "stage": "已做小样本验证"
+    },
+    {
+      "access_status": "gated_auto",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm_bimanual"
+      ],
+      "entry_url": "https://huggingface.co/datasets/XDOF/ABC-130k/blob/75ca0b88bda489f2bd935d72454593ecb90efb52/README.md",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "MCAP + annotation MCAP",
+      "id": "abc-130k",
+      "license": "Apache-2.0",
+      "limitations": "与 LeRobot 转换版重叠",
+      "name": "ABC-130k",
+      "purpose": "双臂原始日志和细粒度标注",
+      "reported_scale": "pinned card: 130,703 episodes / 3,590.7 hours / 42,980 annotated",
+      "sample_plan": "先取 MCAP 小样包并验证与 v3 派生集的原始轨迹关联",
+      "source_ids": [
+        25
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm_bimanual"
+      ],
+      "entry_url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke/blob/b342a0ff262195d49bae3eece6e3f40c6e1dbe15/meta/info.json",
+      "existing_parser_support": "本次所锁定子集已实测",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot v3.0",
+      "id": "abc-v3-smoke",
+      "license": "Apache-2.0 (card; retain upstream attribution)",
+      "limitations": "不是新的独立数据集；裁剪编码与原始不同",
+      "name": "ABC LeRobot v3 smoke",
+      "purpose": "v3 reader smoke validation",
+      "reported_scale": "metadata checked: 85 episodes / 313,094 frames",
+      "sample_plan": "本机已固定 6 条 episode、一路相机；迁移清单即可，不再扩量",
+      "source_ids": [
+        50,
+        25
+      ],
+      "stage": "已做小样本验证"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "wheeled_humanoid"
+      ],
+      "entry_url": "https://github.com/1x-technologies/1xgpt",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "video tokens + actions; later raw video/state release",
+      "id": "one-x-worldmodel",
+      "license": "Apache-2.0 early release; check raw variants",
+      "limitations": "不是最新 NEO 全量 VLA 数据",
+      "name": "1X World Model Challenge data",
+      "purpose": "世界模型与动作条件预测",
+      "reported_scale": "100+ hours; release-stage specific",
+      "sample_plan": "先确认视频／状态／动作版本和世界模型用途，再取单个样包",
+      "source_ids": [
+        26,
+        51
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "human"
+      ],
+      "entry_url": "https://github.com/apple/ml-egodex",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "video + 3D pose annotations",
+      "id": "egodex",
+      "license": "CC-BY-NC-ND (dataset)",
+      "limitations": "机器人 BC 需要额外动作对应和权利确认",
+      "name": "EgoDex",
+      "purpose": "人体手部先验、动作重定向",
+      "reported_scale": "829 hours (official)",
+      "sample_plan": "按人体辅助学习用途取短片与姿态标签，不进入机器人 action BC",
+      "source_ids": [
+        22
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "project_download_links",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "handheld_gripper",
+        "arm",
+        "bimanual"
+      ],
+      "entry_url": "https://umi-gripper.github.io/",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "task-specific video/trajectory pipeline",
+      "id": "umi",
+      "license": "check each data package",
+      "limitations": "依赖轨迹估计、时延与目标控制器",
+      "name": "UMI task data and collection system",
+      "purpose": "机器人未确定时的夹爪操作采集",
+      "reported_scale": "task-package specific; no pooled total",
+      "sample_plan": "优先取采集与重定向说明，再取一个任务的完整示范",
+      "source_ids": [
+        23
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_component_links",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "multi_embodiment"
+      ],
+      "entry_url": "https://github.com/google-deepmind/open_x_embodiment",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "RLDS / TFDS",
+      "id": "oxe",
+      "license": "component-specific licenses",
+      "limitations": "与组成数据、派生版本不能相加",
+      "name": "Open X-Embodiment",
+      "purpose": "多本体预训练与数据配方",
+      "reported_scale": "evolving aggregate; see component spreadsheet",
+      "sample_plan": "先选组成数据集；优先避免与 DROID／Bridge 重复下载",
+      "source_ids": [
+        1
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm"
+      ],
+      "entry_url": "https://droid-dataset.github.io/",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "RLDS; raw MP4 + HDF5 + JSON",
+      "id": "droid",
+      "license": "CC-BY-4.0",
+      "limitations": "action convenience-vector comment needs source-code verification",
+      "name": "DROID",
+      "purpose": "Franka 多场景与 openpi 适配",
+      "reported_scale": "76k episodes / 350 hours / 564 scenes (project)",
+      "sample_plan": "官方小样包／100-episode 路线先验证，再选任务子集；暂不取全量视频",
+      "source_ids": [
+        2,
+        3,
+        53
+      ],
+      "stage": "第一批候选"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm"
+      ],
+      "entry_url": "https://rail-berkeley.github.io/bridgedata/",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "raw JPEG/trajectory; RLDS/LeRobot derivatives",
+      "id": "bridge-v2",
+      "license": "CC-BY-4.0",
+      "limitations": "不同转换版本不能当独立数据",
+      "name": "BridgeData V2",
+      "purpose": "基础操作和语言条件",
+      "reported_scale": "60,096 = 50,365 teleop + 9,731 scripted",
+      "sample_plan": "固定机器人配置与单个操作族，先取 10～20 条完整示范",
+      "source_ids": [
+        4
+      ],
+      "stage": "第一批候选"
+    },
+    {
+      "access_status": "public_download_and_generator",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm_bimanual"
+      ],
+      "entry_url": "https://github.com/RoboTwin-Platform/RoboTwin",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "HDF5 / current XPolicyLab / LeRobot conversion",
+      "id": "robotwin-2",
+      "license": "code/data/assets must be checked separately",
+      "limitations": "仿真高分不保证真实收益",
+      "name": "RoboTwin 2.0",
+      "purpose": "双臂随机化与目标本体生成",
+      "reported_scale": "100k+ precollected (official)",
+      "sample_plan": "选择一个双臂操作任务，先取环境与少量成功示范",
+      "source_ids": [
+        18,
+        45
+      ],
+      "stage": "第一批候选"
+    },
+    {
+      "access_status": "public_download_and_generator",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "mobile_manipulation"
+      ],
+      "entry_url": "https://github.com/robocasa/robocasa",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot current release",
+      "id": "robocasa365",
+      "license": "CC-BY-4.0 datasets/assets per project; code MIT",
+      "limitations": "厨房分布不等于工业分布",
+      "name": "RoboCasa365",
+      "purpose": "长任务、移动操作仿真",
+      "reported_scale": "365 tasks / 2,200+ demonstration hours",
+      "sample_plan": "先取一个任务族、环境配置和少量示范",
+      "source_ids": [
+        19,
+        54
+      ],
+      "stage": "按场景选择"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm"
+      ],
+      "entry_url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "simulation demos; modified RLDS derivatives",
+      "id": "libero",
+      "license": "verify data package; code license not substituted",
+      "limitations": "固定原版/modified版本，不能与实机成功率混用",
+      "name": "LIBERO",
+      "purpose": "训练与闭环评测起点",
+      "reported_scale": "benchmark suite/version specific",
+      "sample_plan": "固定一个任务集与官方划分，先完成加载和一次评测回放",
+      "source_ids": [
+        43
+      ],
+      "stage": "第一批候选"
+    },
+    {
+      "access_status": "public_mixed_artifacts",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "arm",
+        "humanoid"
+      ],
+      "entry_url": "https://www.agibot.com/article/231/detail/29.html",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "release archives; HF mixes data and checkpoints",
+      "id": "genie-sim-3",
+      "license": "HF license metadata absent; verify package terms",
+      "limitations": "不能将工具／模型文件算作轨迹或默认统一授权",
+      "name": "Genie Sim 3.0 data",
+      "purpose": "智元生态真仿路线",
+      "reported_scale": "10,000+ hours vendor claim; not independently inventoried",
+      "sample_plan": "先核实可用数据、权利与厂商规模口径，暂不批量下载",
+      "source_ids": [
+        20,
+        21
+      ],
+      "stage": "暂缓"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "mixed"
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-GR1/blob/9f68429ad12535d30d1aae33b7945c79c830c8c4/README.md",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "mixed LeRobot directories",
+      "id": "nvidia-gr1-current",
+      "license": "CC-BY-NC-4.0 current card",
+      "limitations": "不能按历史名称推断整库内容与许可",
+      "name": "Teleop-GR1 current repository",
+      "purpose": "版本与内容漂移案例",
+      "reported_scale": "not adopted: current README is DreamDojo",
+      "sample_plan": "数据卡与文件内容版本存在不一致，先核实版本",
+      "source_ids": [
+        52
+      ],
+      "stage": "暂缓"
+    },
+    {
+      "access_status": "public_download",
+      "capacity_bytes": null,
+      "capacity_note": "全量压缩／解压／视频体积未在本次逐包实测；下载前查询目标文件清单，不把小时／轨迹数当作 GB。",
+      "embodiments": [
+        "healthcare_robotics"
+      ],
+      "entry_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Open-H-Embodiment",
+      "existing_parser_support": "待适配或待对目标子集验证，索引存在不等于 reader 已支持",
+      "expansion_gate": "样包能解释并接入目标训练器，且任务／控制配置与实验目标匹配，再决定扩量。",
+      "format": "LeRobot v2.1",
+      "id": "open-h-excluded",
+      "license": "CC-BY-4.0 card; component review still relevant",
+      "limitations": "H means healthcare, not industrial humanoid",
+      "name": "Open-H-Embodiment",
+      "purpose": "展示数据命名需核对",
+      "reported_scale": "not prioritized for factory use",
+      "sample_plan": "当前主方向是医疗，不作为工业数据优先项",
+      "source_ids": [
+        55
+      ],
+      "stage": "暂缓"
+    }
+  ]
+}

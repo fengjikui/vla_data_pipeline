@@ -1,0 +1,32 @@
+[
+  {
+    "asset": "deliverables/assets/g1_real.png",
+    "episode": 0,
+    "license": "CC-BY-4.0",
+    "revision": "0d7bdd06e67f3ca0868892d0ec8f03bcd3e49e40",
+    "source_repo": "nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+    "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+    "transformation": "Extracted original-resolution video frame, no generative alteration",
+    "video_pts": 2.75
+  },
+  {
+    "asset": "deliverables/assets/abc_real.png",
+    "episode": 0,
+    "license": "Apache-2.0",
+    "revision": "b342a0ff262195d49bae3eece6e3f40c6e1dbe15",
+    "source_repo": "lerobot/abc_130k_v3_smoke",
+    "source_url": "https://huggingface.co/datasets/lerobot/abc_130k_v3_smoke",
+    "transformation": "Extracted original-resolution video frame, no generative alteration",
+    "video_pts": 48.733333333333334
+  },
+  {
+    "asset": "deliverables/assets/panda_sim.png",
+    "episode": 0,
+    "license": "CC-BY-4.0",
+    "revision": "ea7ac0b68f87da62f1e726771bba0fe74300802f",
+    "source_repo": "nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+    "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim",
+    "transformation": "Extracted original-resolution video frame, no generative alteration",
+    "video_pts": 4.5
+  }
+]

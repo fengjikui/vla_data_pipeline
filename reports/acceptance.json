@@ -1,0 +1,93 @@
+{
+  "accepted_real_source_episodes": 18,
+  "adversarial_fixture_result": {
+    "accepted": 1,
+    "duplicates": 1,
+    "origin": "Copies/corruptions of NVIDIA G1 episode 0, not extra real demonstrations",
+    "quarantine_details": [
+      {
+        "episode_id": "bad_time",
+        "reasons": [
+          "non_monotonic_time"
+        ],
+        "source_id": "injected",
+        "stage": "quality"
+      },
+      {
+        "episode_id": "bad_nan",
+        "reasons": [
+          "action_non_finite"
+        ],
+        "source_id": "injected",
+        "stage": "quality"
+      },
+      {
+        "episode_id": "bad_video",
+        "reasons": [
+          "missing_video"
+        ],
+        "source_id": "injected",
+        "stage": "quality"
+      }
+    ],
+    "quarantined": 3
+  },
+  "checks": {
+    "action_normalization_roundtrip_max_abs_error": 9.552000279633432e-08,
+    "all_action_windows_episode_bounded": true,
+    "cached_second_run": true,
+    "masked_padding_elements": 3265,
+    "offline_rerun_same_manifest": true,
+    "output_integrity_verified": true,
+    "train_only_statistics": true
+  },
+  "elapsed_seconds": 24.196,
+  "numeric_frames": 23109,
+  "raw_download_bytes": 212232535,
+  "release_id": "d6c42e269fafb49808f8863b",
+  "sources": [
+    {
+      "accepted": 6,
+      "action_dim": 43,
+      "frames": 684,
+      "id": "g1_real",
+      "label": "真实人形 G1 上身遥操作",
+      "splits": {
+        "train": 4,
+        "validation": 2
+      },
+      "state_dim": 43,
+      "training_windows": 75,
+      "view_status": "interface_smoke_only"
+    },
+    {
+      "accepted": 6,
+      "action_dim": 14,
+      "frames": 21193,
+      "id": "abc_real",
+      "label": "真实双臂 YAM 遥操作",
+      "splits": {
+        "train": 4,
+        "validation": 2
+      },
+      "state_dim": 14,
+      "training_windows": 384,
+      "view_status": "interface_smoke_only"
+    },
+    {
+      "accepted": 6,
+      "action_dim": 14,
+      "frames": 1232,
+      "id": "panda_sim",
+      "label": "仿真双臂 Panda 穿引任务",
+      "splits": {
+        "train": 5,
+        "validation": 1
+      },
+      "state_dim": 32,
+      "training_windows": 131,
+      "view_status": "interface_smoke_only"
+    }
+  ],
+  "training_windows": 590
+}

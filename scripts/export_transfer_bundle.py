@@ -6,7 +6,7 @@ import json
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-DIRS=('catalog','configs','docs','evidence','plans','reports','scripts','src','tests','deliverables')
+DIRS=('.github','catalog','configs','docs','evidence','plans','reports','scripts','src','tests','deliverables')
 FILES=('README.md','pyproject.toml','uv.lock','.python-version','.gitattributes','.gitignore')
 
 
