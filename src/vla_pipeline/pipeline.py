@@ -16,7 +16,7 @@ from .readers import Episode,read_source
 from .quality import check_episode,trajectory_fingerprint,assign_split,fit_stats,action_chunk
 from .media import decode_at
 
-VERSION='0.1.0'
+VERSION='0.2.0'
 DEFAULT_RECIPE={'schema':'training_view_v1','view':'interface_smoke','horizon':8,'anchor_stride':10,'max_anchors_per_episode':64,'image_size':64,'split_seed':'lab-demo-v1','pts_roundoff_tolerance_seconds':1e-6,'normalize':'per_source_train_only_zscore','action_rate':'source_native_no_resampling','limitations':['not a validated upstream VLA adapter','no hardware-clock latency calibration','unknown action semantics block deployment','holdout is episode-level engineering validation, not scene generalization']}
 
 
@@ -30,12 +30,14 @@ def validate_lock(lock):
         sid=spec['id']
         if not sid or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-' for c in sid):raise ValueError('Invalid source id')
         if not spec.get('origin_namespace') or not spec.get('license'):raise ValueError('Source provenance and license required')
-        if not spec.get('revision') or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_.-' for c in spec['revision']):raise ValueError('Safe source revision required')
+        if spec.get('revision') in ('.','..') or str(spec.get('revision','')).endswith('.') or not spec.get('revision') or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_.-' for c in spec['revision']):raise ValueError('Safe source revision required')
         for f in spec['files']:
             confined(Path('/tmp/source-root'),f['path'])
             if len(f['sha256'])!=64 or f['bytes']<0:raise ValueError('Invalid file lock')
+        if sid.upper() in {'CON','PRN','AUX','NUL',*[f'COM{i}' for i in range(1,10)],*[f'LPT{i}' for i in range(1,10)]}:raise ValueError('Source id is reserved on Windows')
         ids.append(sid)
     if len(ids)!=len(set(ids)):raise ValueError('Duplicate source id')
+    if len(ids)!=len({s.casefold() for s in ids}):raise ValueError('Source ids collide on case-insensitive filesystems')
 
 
 def download(lock,raw_root,offline=False):
@@ -47,17 +49,21 @@ def download(lock,raw_root,offline=False):
 
 
 def verify_release(path):
-    manifest=json.loads((path/'manifest.json').read_text())
+    manifest=json.loads((path/'manifest.json').read_text(encoding='utf-8'))
     for rel,sha in manifest['output_sha256'].items():
         if digest(confined(path,rel))!=sha:raise ValueError(f'Release corrupted: {rel}')
     return manifest
 
 
 def run(lock_path,root,offline=False,recipe=None):
-    lock=json.loads(Path(lock_path).read_text());recipe=dict(DEFAULT_RECIPE,**(recipe or {}))
+    lock=json.loads(Path(lock_path).read_text(encoding='utf-8'));recipe=dict(DEFAULT_RECIPE,**(recipe or {}))
     for key in ('horizon','anchor_stride','max_anchors_per_episode','image_size'):
         if not isinstance(recipe[key],int) or recipe[key]<=0:raise ValueError('Recipe values must be positive integers')
     if recipe['view']!='interface_smoke':raise ValueError('Only interface_smoke is implemented; production action_bc requires verified semantics and supervision')
+    for key in ('schema','normalize','action_rate','pts_roundoff_tolerance_seconds'):
+        if recipe[key]!=DEFAULT_RECIPE[key]:raise ValueError('Unsupported recipe algorithm: '+key)
+    if not isinstance(recipe['split_seed'],str) or not recipe['split_seed']:raise ValueError('Nonempty split seed required')
+    pa.set_cpu_count(1);pa.set_io_thread_count(1)
     download(lock,root/'raw',offline)
     implementation=code_hash()
     release_id=object_hash({'lock':lock,'recipe':recipe,'code':implementation})[:24]
@@ -76,6 +82,9 @@ def run(lock_path,root,offline=False,recipe=None):
                 q=check_episode(ep)
                 if q['errors']:
                     quarantined.append({'source_id':ep.source_id,'episode_id':ep.episode_id,'stage':'quality','reasons':q['errors']});continue
+                previous=next((x[0] for x in accepted if x[0].source_id==ep.source_id),None)
+                if previous is not None and (ep.state.shape[1],ep.action.shape[1],ep.state_names,ep.action_names)!=(previous.state.shape[1],previous.action.shape[1],previous.state_names,previous.action_names):
+                    quarantined.append({'source_id':ep.source_id,'episode_id':ep.episode_id,'stage':'contract','reason':'mixed dimensions or joint order within one source; split into separate contracts'});continue
                 fingerprint=trajectory_fingerprint(ep)
                 if fingerprint in seen:
                     duplicates.append({'source_id':ep.source_id,'episode_id':ep.episode_id,'same_numeric_trajectory_as':seen[fingerprint]});continue
@@ -89,7 +98,7 @@ def run(lock_path,root,offline=False,recipe=None):
                     quarantined.append({'source_id':ep.source_id,'episode_id':ep.episode_id,'stage':'media','reason':str(exc)});continue
                 seen[fingerprint]=f'{ep.source_id}:{ep.episode_id}'
                 accepted.append((ep,split,anchors,rgb,pts))
-                rec={'source_id':ep.source_id,'episode_id':ep.episode_id,'origin_group':ep.origin_group,'split':split,'embodiment':ep.embodiment,'frames':n,'anchors':len(anchors),'state_dim':ep.state.shape[1],'action_dim':ep.action.shape[1],'fps':ep.fps,'duration_seconds':float(ep.timestamps[-1]-ep.timestamps[0]),'task_first':ep.language[0],'task_last':ep.language[-1],'action_names':ep.action_names,'state_names':ep.state_names,'quality':q,'alignment':alignment,'fingerprint':fingerprint,'video_offset':ep.video_offset,'source_extras':ep.extras}
+                rec={'source_id':ep.source_id,'episode_id':ep.episode_id,'origin_group':ep.origin_group,'split':split,'embodiment':ep.embodiment,'frames':n,'anchors':len(anchors),'state_dim':ep.state.shape[1],'action_dim':ep.action.shape[1],'fps':ep.fps,'duration_seconds':float(ep.timestamps[-1]-ep.timestamps[0]),'success':ep.success,'semantics_status':ep.semantics_status,'task_first':ep.language[0],'task_last':ep.language[-1],'action_names':ep.action_names,'state_names':ep.state_names,'quality':q,'alignment':alignment,'fingerprint':fingerprint,'video_offset':ep.video_offset,'source_extras':ep.extras}
                 records.append(rec)
                 folder=staging/'canonical'/ep.source_id;folder.mkdir(parents=True,exist_ok=True)
                 pq.write_table(pa.table({'timestamp':ep.timestamps,'state':ep.state.tolist(),'action':ep.action.tolist(),'language':ep.language}),folder/f'{ep.episode_id}.parquet')

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-08",
+  "tests": {
+    "tests": "40",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "2.069"
+  },
+  "wheel_version": "0.2.0",
+  "synthetic_release": "97e4d6de14e3b78f25718b07",
+  "public_samples_release": "24de209e78beda531a6831a6",
+  "pipeline_code_sha256": "e7ec3c69d8d855bea7dd8e7fd28464128cbb60e928a70de82813e31da812f274",
+  "sdk_commit": "ca69a2068462a37f7cdcb74180927a2f863d2bf7",
+  "sdk_actual_platform": "macOS arm64",
+  "sdk_exports": [
+    {
+      "source_id": "g1_edu_synthetic",
+      "split": "train",
+      "frames": 168,
+      "action_batch_shape": [
+        2,
+        8,
+        2
+      ],
+      "max_action_label_error": 5.7220459037665705e-08,
+      "export_files": 10
+    },
+    {
+      "source_id": "g1_edu_synthetic",
+      "split": "validation",
+      "frames": 24,
+      "action_batch_shape": [
+        2,
+        8,
+        2
+      ],
+      "max_action_label_error": 5.7220459037665705e-08,
+      "export_files": 10
+    },
+    {
+      "source_id": "g1_real",
+      "split": "train",
+      "frames": 443,
+      "action_batch_shape": [
+        2,
+        8,
+        43
+      ],
+      "max_action_label_error": 5.8657745327650446e-08,
+      "export_files": 10
+    },
+    {
+      "source_id": "g1_real",
+      "split": "validation",
+      "frames": 241,
+      "action_batch_shape": [
+        2,
+        8,
+        43
+      ],
+      "max_action_label_error": 5.87826960440907e-08,
+      "export_files": 10
+    }
+  ],
+  "robot_control_performed": false,
+  "pretrained_vla_training_performed": false,
+  "robot_dof_hands_confirmed": false
+}

@@ -4,6 +4,18 @@
 
 当前已交付**系统调研、可运行的数据 Pipeline 原型、真实样本工程验收、CPU 训练接口验证及主管汇报包**。机械臂与人形同等展开。训练探针是随机初始化的小型多模态行为克隆网络；完整预训练 VLA 微调、机器人执行和工厂能力仍待后续验证。
 
+## G1 EDU 数据工程（2026-10-08）
+
+采购对象已明确为 **G1 EDU**，具体自由度、手型和控制配置待确认。新增了 XR JSON/图片接入、完整原始快照与哈希、不可改写本地批次、明确 recipe、训练窗口 Dataset，以及固定官方 SDK 的可选 LeRobot 导出桥。
+
+- [数据工程手册](docs/13-g1-edu-data-engineering.md)：现有与候选来源、行走/导航/上肢/搬运的数据区别、逐阶段流程。
+- [手工复现教程](docs/14-g1-edu-manual-reproduction.md)：不需要机器人或数据下载，从合成小样本逐条跑到训练 batch。
+- [存储、版本与运行](docs/15-storage-versioning-operations.md)：Linux/Windows、目录、追溯、增量批次、备份与内网。
+- [字段与训练导出](docs/16-training-export.md)：JSON、Parquet、NPZ、张量/归一化/mask、官方 SDK 与模型适配。
+- [本次验收证据](reports/g1-edu-2026-10-08/acceptance.md) / [G1 来源与工具索引](catalog/g1_edu_sources.json) / [真实采集契约模板](configs/g1_edu_capture_contract.example.json)。
+
+本次的 XR 教学数据是 2 个虚构通道，**不是真实 G1 数据**。原有公开样本只验证数据与训练接口；自由行走、负载搬运及真机控制仍待专项实验。下方 PPT/离线报告保留其 2026-09-12 版本，新的工程证据单独归档。
+
 ## 周一汇报入口
 
 - [主管汇报摘要](docs/06-supervisor-brief.md)：先读这份，掌握结论、成果与需要协调的事项。

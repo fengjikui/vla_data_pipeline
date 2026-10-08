@@ -29,7 +29,7 @@ def write_json(path: Path, value) -> None:
     payload = json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True, allow_nan=False) + '\n'
     fd, temp = tempfile.mkstemp(dir=path.parent, prefix='.writing-')
     try:
-        with os.fdopen(fd, 'w') as f:
+        with os.fdopen(fd, 'w', encoding='utf-8') as f:
             f.write(payload)
         os.replace(temp, path)
     finally:

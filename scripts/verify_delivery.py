@@ -11,12 +11,14 @@ from vla_pipeline.pipeline import run,verify_release
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--report-dir',type=Path,default=ROOT/'reports');args=parser.parse_args()
     start=time.perf_counter()
     manifest,cached=run(ROOT/'configs/demo_sources.lock.json',ROOT/'data',True)
     release=ROOT/'data/releases'/manifest['release_id']
     again,second_cached=run(ROOT/'configs/demo_sources.lock.json',ROOT/'data',True)
     assert again==manifest and second_cached
-    q=json.loads((release/'quality.json').read_text());stats=json.loads((release/'statistics.json').read_text())
+    q=json.loads((release/'quality.json').read_text(encoding='utf-8'));stats=json.loads((release/'statistics.json').read_text(encoding='utf-8'))
     for source,st in stats.items():
         allowed={r['episode_id'] for r in q['episodes'] if r['source_id']==source and r['split']=='train'}
         assert set(st['fit_episode_ids'])==allowed
@@ -35,7 +37,7 @@ def main():
     # Create explicit derived fixtures from one actual G1 numeric episode + video.
     # These are test corruptions, never counted as additional real demonstrations.
     testroot=ROOT/'data/acceptance-fixtures';rawroot=testroot/'raw/injected/v1';rawroot.mkdir(parents=True,exist_ok=True)
-    source=json.loads((ROOT/'configs/demo_sources.lock.json').read_text())['sources'][0]
+    source=json.loads((ROOT/'configs/demo_sources.lock.json').read_text(encoding='utf-8'))['sources'][0]
     sourcebase=ROOT/'data/raw'/source['id']/source['revision']
     video=next(x['path'] for x in source['files'] if x['path'].endswith('episode_000000.mp4'))
     shutil.copy2(sourcebase/video,rawroot/'video.mp4')
@@ -55,12 +57,12 @@ def main():
     write_json(testroot/'lock.json',lock)
     adverse,_=run(testroot/'lock.json',testroot,True)
     assert adverse['accepted_episodes']==1 and adverse['duplicate_episodes']==1 and adverse['quarantined_episodes']==3
-    aq=json.loads((testroot/'releases'/adverse['release_id']/'quality.json').read_text())
+    aq=json.loads((testroot/'releases'/adverse['release_id']/'quality.json').read_text(encoding='utf-8'))
     result={'release_id':manifest['release_id'],'accepted_real_source_episodes':manifest['accepted_episodes'],'numeric_frames':manifest['numeric_frames'],'training_windows':windows,'raw_download_bytes':manifest['raw_download_bytes'],'checks':{'offline_rerun_same_manifest':True,'cached_second_run':second_cached,'train_only_statistics':True,'all_action_windows_episode_bounded':True,'masked_padding_elements':masks,'action_normalization_roundtrip_max_abs_error':max_roundtrip,'output_integrity_verified':bool(verify_release(release))},'adversarial_fixture_result':{'origin':'Copies/corruptions of NVIDIA G1 episode 0, not extra real demonstrations','accepted':adverse['accepted_episodes'],'duplicates':adverse['duplicate_episodes'],'quarantined':adverse['quarantined_episodes'],'quarantine_details':aq['quarantined']},'sources':manifest['sources'],'elapsed_seconds':round(time.perf_counter()-start,3)}
-    write_json(ROOT/'reports/acceptance.json',result)
+    write_json(args.report_dir/'acceptance.json',result)
     # Report evidence excludes absolute machine paths and bulk numeric training data.
-    write_json(ROOT/'reports/pipeline_manifest.json',manifest)
-    write_json(ROOT/'reports/episode_quality.json',q)
+    write_json(args.report_dir/'pipeline_manifest.json',manifest)
+    write_json(args.report_dir/'episode_quality.json',q)
     print(json.dumps(result,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':main()

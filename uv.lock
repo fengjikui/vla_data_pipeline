@@ -548,7 +548,7 @@ wheels = [
 
 [[package]]
 name = "vla-data-pipeline"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "av" },
@@ -567,7 +567,7 @@ train = [
 
 [package.metadata]
 requires-dist = [
-    { name = "av", specifier = ">=16,<18" },
+    { name = "av", specifier = ">=15,<18" },
     { name = "numpy", specifier = ">=2.0,<3" },
     { name = "pillow", specifier = ">=11,<13" },
     { name = "pyarrow", specifier = "==25.0.1" },

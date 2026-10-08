@@ -30,6 +30,13 @@ class Episode:
     extras: dict = field(default_factory=dict)
 
 
+def locked_path(root, relative, spec):
+    path = confined(root, relative)
+    if not any(confined(root, f['path']) == path for f in spec['files']):
+        raise ValueError('Adapter input is not covered by source lock: ' + str(relative))
+    return path
+
+
 def feature_names(info, key):
     names=info['features'][key].get('names')
     return names if isinstance(names,list) and all(isinstance(x,str) for x in names) else []
@@ -48,29 +55,31 @@ def language_at_time(task, annotations, timestamp):
 def read_lerobot(spec: dict, raw_root: Path):
     root=confined(raw_root,spec['id']+'/'+spec['revision'])
     base=confined(root,spec.get('subset',''))
-    info=json.loads((base/'meta/info.json').read_text())
+    def source_path(rel):
+        return locked_path(root,(Path(spec.get('subset',''))/rel).as_posix(),spec)
+    info=json.loads(source_path('meta/info.json').read_text(encoding='utf-8'))
     is_v3=spec['format']=='lerobot_v3'
     version=info.get('codebase_version','')
     if (is_v3 and not version.startswith('v3')) or (not is_v3 and not version.startswith('v2')):
         raise ValueError(f'Unsupported source version: {version}')
     if is_v3:
-        tasks={int(row['task_index']):str(row['task']) for row in pq.read_table(base/'meta/tasks.parquet').to_pylist()}
-        metadata={int(x['episode_index']):x for x in pq.read_table(base/'meta/episodes/chunk-000/file-000.parquet').to_pylist()}
+        tasks={int(row['task_index']):str(row['task']) for row in pq.read_table(source_path('meta/tasks.parquet')).to_pylist()}
+        metadata={int(x['episode_index']):x for x in pq.read_table(source_path('meta/episodes/chunk-000/file-000.parquet')).to_pylist()}
     else:
-        tasks={int(x['task_index']):x['task'] for x in (json.loads(l) for l in (base/'meta/tasks.jsonl').read_text().splitlines() if l.strip())}
-        metadata={int(x['episode_index']):x for x in (json.loads(l) for l in (base/'meta/episodes.jsonl').read_text().splitlines() if l.strip())}
+        tasks={int(x['task_index']):x['task'] for x in (json.loads(l) for l in source_path('meta/tasks.jsonl').read_text(encoding='utf-8').splitlines() if l.strip())}
+        metadata={int(x['episode_index']):x for x in (json.loads(l) for l in source_path('meta/episodes.jsonl').read_text(encoding='utf-8').splitlines() if l.strip())}
     for e in spec['episodes']:
         try:
             meta=metadata[e]
             if is_v3:
                 data_rel=info['data_path'].format(chunk_index=meta['data/chunk_index'],file_index=meta['data/file_index'])
-                table=pq.read_table(confined(base,data_rel),filters=[('episode_index','=',e)])
+                table=pq.read_table(source_path(data_rel),filters=[('episode_index','=',e)])
                 video_rel=info['video_path'].format(video_key=spec['camera'],chunk_index=meta[f'videos/{spec["camera"]}/chunk_index'],file_index=meta[f'videos/{spec["camera"]}/file_index'])
                 offset=float(meta[f'videos/{spec["camera"]}/from_timestamp'])
                 end=float(meta[f'videos/{spec["camera"]}/to_timestamp'])
             else:
                 data_rel=info['data_path'].format(episode_chunk=e//info['chunks_size'],episode_index=e)
-                table=pq.read_table(confined(base,data_rel))
+                table=pq.read_table(source_path(data_rel))
                 video_rel=info['video_path'].format(episode_chunk=e//info['chunks_size'],episode_index=e,video_key=spec['camera'])
                 offset=0.0;end=None
             rows=table.to_pylist()
@@ -87,7 +96,7 @@ def read_lerobot(spec: dict, raw_root: Path):
             st=np.asarray([r['observation.state'] for r in rows],dtype=np.float64)
             ac=np.asarray([r['action'] for r in rows],dtype=np.float64)
             if st.shape[1:]!=tuple(info['features']['observation.state']['shape']) or ac.shape[1:]!=tuple(info['features']['action']['shape']):raise ValueError('Shape disagrees with source metadata')
-            yield Episode(spec['id'],str(e),f'{spec["origin_namespace"]}:{e}',spec['embodiment'],float(info['fps']),np.asarray([r['timestamp'] for r in rows]),st,ac,language,confined(base,video_rel),offset,end,feature_names(info,'observation.state'),feature_names(info,'action'),spec.get('semantics_status','unknown'),extras={'source_data_path':data_rel,'source_columns':table.column_names,'source_split':'train','timestamp_basis':'source_episode_seconds','alignment_assumption':'video PTS and robot timestamps share source clock; availability latency unverified','source_episode_index':e})
+            yield Episode(spec['id'],str(e),f'{spec["origin_namespace"]}:{e}',spec['embodiment'],float(info['fps']),np.asarray([r['timestamp'] for r in rows]),st,ac,language,source_path(video_rel),offset,end,feature_names(info,'observation.state'),feature_names(info,'action'),spec.get('semantics_status','unknown'),extras={'source_data_path':data_rel,'source_columns':table.column_names,'source_split':'train','timestamp_basis':'source_episode_seconds','alignment_assumption':'video PTS and robot timestamps share source clock; availability latency unverified','source_episode_index':e})
         except (ValueError,KeyError,FileNotFoundError,pa.ArrowException) as exc:
             yield {'source_id':spec['id'],'episode_id':str(e),'stage':'parse','reason':str(exc)}
 
@@ -97,9 +106,9 @@ def read_local_json(spec: dict, raw_root: Path):
     root=confined(raw_root,spec['id']+'/'+spec['revision'])
     for rel in spec['episode_files']:
         try:
-            item=json.loads(confined(root,rel).read_text())
+            item=json.loads(locked_path(root,rel,spec).read_text(encoding='utf-8'))
             rows=item['steps']
-            yield Episode(spec['id'],str(item['episode_id']),item['origin_group'],spec['embodiment'],float(item['fps']),np.asarray([r['timestamp'] for r in rows],float),np.asarray([r['state'] for r in rows],float),np.asarray([r['action'] for r in rows],float),[r['language'] for r in rows],confined(root,item['video']) if item.get('video') else None,float(item.get('video_offset',0)),semantics_status=spec.get('semantics_status','unknown'),success=item.get('success'),extras={'source_data_path':rel,'alignment_assumption':item.get('alignment_assumption','unverified')})
+            yield Episode(spec['id'],str(item['episode_id']),item['origin_group'],spec['embodiment'],float(item['fps']),np.asarray([r['timestamp'] for r in rows],float),np.asarray([r['state'] for r in rows],float),np.asarray([r['action'] for r in rows],float),[r['language'] for r in rows],locked_path(root,item['video'],spec) if item.get('video') else None,float(item.get('video_offset',0)),state_names=spec.get('state_names',[]),action_names=spec.get('action_names',[]),semantics_status=spec.get('semantics_status','unknown'),success=item.get('success'),extras={'source_data_path':rel,'alignment_assumption':item.get('alignment_assumption','unverified'),'timestamp_basis':item.get('timestamp_basis','unverified'),'provenance':item.get('provenance',{}),'action_contract':spec.get('action_contract',{})})
         except (ValueError,KeyError,TypeError,OSError) as exc:
             yield {'source_id':spec['id'],'episode_id':rel,'stage':'parse','reason':str(exc)}
 

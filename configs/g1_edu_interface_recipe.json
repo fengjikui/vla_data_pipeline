@@ -1,0 +1,12 @@
+{
+  "schema": "training_view_v1",
+  "view": "interface_smoke",
+  "horizon": 8,
+  "anchor_stride": 10,
+  "max_anchors_per_episode": 64,
+  "image_size": 64,
+  "split_seed": "lab-demo-v1",
+  "normalize": "per_source_train_only_zscore",
+  "action_rate": "source_native_no_resampling",
+  "limitations": ["Engineering interface only", "Native action semantics preserved without retargeting", "One camera in current reader", "No locomotion or carrying capability validation"]
+}

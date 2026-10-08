@@ -1,0 +1,104 @@
+[
+  {
+    "repo": "unitreerobotics/xr_teleoperate",
+    "commit": "817fb00c63cde15e5f24a0f8fa08e1e33ed89d3b",
+    "commit_date": "2026-09-07T03:34:58Z",
+    "checked_on": "2026-10-08",
+    "files": [
+      {
+        "path": "teleop/utils/episode_writer.py",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/xr_teleoperate/817fb00c63cde15e5f24a0f8fa08e1e33ed89d3b/teleop/utils/episode_writer.py",
+        "sha256": "664937c5192fcb19cfdd1656af8c88310fc1f8860aee8db806760d8d7a815888"
+      }
+    ]
+  },
+  {
+    "repo": "unitreerobotics/unitree_IL_lerobot",
+    "commit": "41c2805742de879ddab2d8d6beaeaf215f876395",
+    "commit_date": "2026-05-25T07:52:05Z",
+    "checked_on": "2026-10-08",
+    "files": [
+      {
+        "path": "unitree_lerobot/eval_robot/utils/episode_writer.py",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_IL_lerobot/41c2805742de879ddab2d8d6beaeaf215f876395/unitree_lerobot/eval_robot/utils/episode_writer.py",
+        "sha256": "418f6f08f857536abc063632e46596d884f86ff136fe6e599d46d69b52489cd5"
+      },
+      {
+        "path": "unitree_lerobot/utils/convert_unitree_json_to_h5.py",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_IL_lerobot/41c2805742de879ddab2d8d6beaeaf215f876395/unitree_lerobot/utils/convert_unitree_json_to_h5.py",
+        "sha256": "c55232fb6fbdbfb91382a2e1d8f4fa73321ccc9241c46ad7538c8a41764d513f"
+      },
+      {
+        "path": "unitree_lerobot/utils/convert_unitree_json_to_lerobot.py",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_IL_lerobot/41c2805742de879ddab2d8d6beaeaf215f876395/unitree_lerobot/utils/convert_unitree_json_to_lerobot.py",
+        "sha256": "4a5f5dcf9165a2301fe4d4f7c0850e56a94714833735f1b2ca3e8f280dce6eb7"
+      },
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_IL_lerobot/41c2805742de879ddab2d8d6beaeaf215f876395/README.md",
+        "sha256": "357828b9aba2bd3a21d16541c1a47c83d7ef8fd623fa4794482a2773bb619f91"
+      },
+      {
+        "path": "unitree_lerobot/utils/constants.py",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_IL_lerobot/41c2805742de879ddab2d8d6beaeaf215f876395/unitree_lerobot/utils/constants.py",
+        "sha256": "6fcaa836e15dfe96f0706e214f655a0c77a2e6933581e3ca58dc599515aab68a"
+      }
+    ]
+  },
+  {
+    "repo": "huggingface/lerobot",
+    "commit": "ca69a2068462a37f7cdcb74180927a2f863d2bf7",
+    "commit_date": "2026-10-07T11:26:44Z",
+    "checked_on": "2026-10-08",
+    "files": [
+      {
+        "path": "src/lerobot/datasets/lerobot_dataset.py",
+        "url": "https://raw.githubusercontent.com/huggingface/lerobot/ca69a2068462a37f7cdcb74180927a2f863d2bf7/src/lerobot/datasets/lerobot_dataset.py",
+        "sha256": "9837856f0b7611adb2ae71dc87922b2403b5f96c370a1a76925147036a2d5cf2"
+      },
+      {
+        "path": "src/lerobot/datasets/utils.py",
+        "url": "https://raw.githubusercontent.com/huggingface/lerobot/ca69a2068462a37f7cdcb74180927a2f863d2bf7/src/lerobot/datasets/utils.py",
+        "sha256": "eec3acff71a45019b9f67c2d84b812601964dac0baf232a4541dc68c5442e60b"
+      },
+      {
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/huggingface/lerobot/ca69a2068462a37f7cdcb74180927a2f863d2bf7/pyproject.toml",
+        "sha256": "b6b7d36b1f7e9ce81d8fcee5a356b9cbcdf0877d169f16b51b1e0ade0219a7fd"
+      }
+    ]
+  },
+  {
+    "repo": "unitreerobotics/unitree_rl_lab",
+    "commit": "4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+    "commit_date": "2025-11-19T04:08:01Z",
+    "checked_on": "2026-10-08",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_rl_lab/4960b84732b0c2ec593dccbfe963fda1bcd7b1e3/README.md",
+        "sha256": "87a0ca55d9896c74b6b6fa690a3795c6ebc1635e57d2d50f36d87fcfe7718a32"
+      }
+    ]
+  },
+  {
+    "repo": "unitreerobotics/unitree_mujoco",
+    "commit": "1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d",
+    "commit_date": "2026-09-07T13:21:09Z",
+    "checked_on": "2026-10-08",
+    "files": [
+      {
+        "path": "readme_zh.md",
+        "url": "https://raw.githubusercontent.com/unitreerobotics/unitree_mujoco/1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d/readme_zh.md",
+        "sha256": "73caa683aaccdf60a2e11bb3a9a2f3e0d31d54e9dc5d43d6b017827d14a54e90"
+      }
+    ]
+  },
+  {
+    "repo": "unitreerobotics/unitree_sdk2_python",
+    "commit": "814556d15970dd2ecf1c9984e845ca02ab07e206",
+    "commit_date": "2026-09-21T12:06:06Z",
+    "checked_on": "2026-10-08",
+    "files": []
+  }
+]

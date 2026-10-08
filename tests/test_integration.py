@@ -13,7 +13,7 @@ from vla_pipeline.quality import assign_split
 def make_local_fixture(path):
     path.mkdir(parents=True,exist_ok=True)
     with av.open(str(path/'video.mp4'),'w') as out:
-        stream=out.add_stream('mpeg4',rate=20);stream.width=64;stream.height=64;stream.pix_fmt='yuv420p'
+        stream=out.add_stream('mpeg4',rate=20);stream.width=64;stream.height=64;stream.pix_fmt='yuv420p';stream.codec_context.thread_count=1
         for i in range(20):
             frame=av.VideoFrame.from_ndarray(np.full((64,64,3),i*10,np.uint8),format='rgb24')
             for packet in stream.encode(frame):out.mux(packet)
@@ -43,7 +43,7 @@ def test_local_ingest_quarantine_dedup_incremental_and_idempotence(tmp_path):
     before={x['episode_id']:x['split'] for x in q['episodes']}
     new=json.loads((incoming/'0.json').read_text());new['episode_id']='new';new['origin_group']='test:new'
     new['steps'][0]['state'][0]=100.;write_json(incoming/'new.json',new)
-    descriptor['episode_files'].append('new.json');write_json(incoming/'source.json',descriptor)
+    descriptor['episode_files'].append('new.json');descriptor['revision']='v2';write_json(incoming/'source.json',descriptor)
     register_local(incoming,incoming/'source.json',root,lock)
     result3,_=run(lock,root,offline=True)
     assert result3['release_id']!=result['release_id'] and result3['accepted_episodes']==9

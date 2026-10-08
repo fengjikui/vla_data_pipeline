@@ -1,0 +1,11 @@
+{
+  "schema": "g1_capture_contract_v1",
+  "status": "template_pending_supplier_confirmation_NOT_deployable",
+  "robot": {"manufacturer": "Unitree", "model": "G1 EDU", "serial": null, "dof_variant": null, "firmware": null, "sdk_commit": null, "left_hand": null, "right_hand": null, "joint_order": [], "urdf_sha256": null},
+  "control": {"task_level": null, "factory_locomotion_enabled": null, "arm_controller": null, "command_type": null, "action_units_by_channel": [], "joint_limits": null, "kp_kd": null, "command_rate_hz": null, "policy_rate_hz": null, "controller_latency_ms": null},
+  "time": {"clock_id": null, "monotonic_clock": true, "capture_timestamp_unit": "ns", "record_acquire_receive_and_command_apply_time": true, "clock_sync_method": null, "measured_offset_ms": null, "measured_jitter_ms": null},
+  "sensors": {"cameras": [], "camera_calibration_sha256": null, "depth_scale": null, "imu_frame": null, "base_pose_source": null, "joint_qpos_qvel": true, "joint_effort_available": null, "foot_contact_available": null, "force_tactile_available": null},
+  "episode": {"session_id": null, "scene_id": null, "operator_id_pseudonym": null, "task_id": null, "task_instruction": null, "object_id": null, "load_mass_kg": null, "success": null, "failure_reason": null, "interventions": [], "collection_mode": null, "rights_record": null},
+  "retention": {"preserve_all_raw_modalities": true, "original_files_sha256": true, "raw_rewrite_allowed": false, "public_upload_default": false},
+  "note": "这是采集需求模板，不是已确认的 G1 配置，也不是当前读取器完整支持的字段。行走日志、IMU、力、接触、深度和多相机的训练视图仍需按任务扩展。"
+}

@@ -14,7 +14,7 @@ def export(output,include_samples=False):
     output=Path(output).resolve();output.parent.mkdir(parents=True,exist_ok=True)
     paths=[]
     for name in DIRS:
-        paths.extend(p for p in (ROOT/name).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ('.pyc','.zip') and p!=output)
+        paths.extend(p for p in (ROOT/name).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix not in ('.pyc','.zip') and not p.name.startswith('.~') and not p.name.endswith('tests.xml') and p!=output)
     paths.extend(ROOT/p for p in FILES if (ROOT/p).is_file())
     if include_samples:paths.extend(p for p in (ROOT/'data/raw').rglob('*') if p.is_file())
     entries={p.relative_to(ROOT).as_posix():p for p in sorted(set(paths))}

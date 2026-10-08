@@ -1,0 +1,13 @@
+{
+  "schema": "unitree_xr_mapping_v1",
+  "status": "fill_before_import",
+  "source": {"id": "g1_edu_lab", "label": "Replace with actual collection description", "revision": "batch-001", "embodiment": "REPLACE_exact_G1_DOF_hands_controller", "origin_namespace": "lab_g1_original", "license": "REPLACE_internal_rights_record", "environment": "real", "collection": "teleoperation", "semantics_status": "unknown"},
+  "camera": "color_0",
+  "timing": {"mode": "nominal_index"},
+  "state_fields": [{"path": "states.left_arm.qpos", "names": [], "unit": "REPLACE_confirm_unit"}, {"path": "states.right_arm.qpos", "names": [], "unit": "REPLACE_confirm_unit"}],
+  "action_fields": [{"path": "actions.left_arm.qpos", "names": [], "unit": "REPLACE_confirm_unit"}, {"path": "actions.right_arm.qpos", "names": [], "unit": "REPLACE_confirm_unit"}],
+  "action_contract": {"type": "REPLACE_confirm_absolute_or_delta_target", "controller": "REPLACE_controller_version", "deployment_ready": false},
+  "origin_groups": {},
+  "result_map": {},
+  "note": "names 必须填采集时实际关节顺序。需要手部动作时显式追加 left_ee/right_ee。此空模板故意不能通过校验；不要把教学 demo 的两个维度当成 G1 的关节。"
+}

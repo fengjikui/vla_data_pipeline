@@ -1,0 +1,101 @@
+{
+  "schema": "g1_source_index_v1",
+  "updated_on": "2026-10-08",
+  "bulk_download_performed": false,
+  "robot_confirmed": "Unitree G1 EDU",
+  "robot_dof_hands_controller_confirmed": false,
+  "items": [
+    {
+      "id": "g1_teleop_verified_sample",
+      "kind": "dataset",
+      "origin": "NVIDIA",
+      "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-Teleop-G1",
+      "priority": "P0_interface_reference",
+      "target": "upper_body_manipulation",
+      "format": "locked_LeRobot_v2.1_task_subset",
+      "status": "6_episodes_one_camera_downloaded_and_verified",
+      "limits": "Not our G1 EDU configuration; not locomotion/carrying demonstrations",
+      "download": "reuse configs/demo_sources.lock.json in company environment"
+    },
+    {
+      "id": "unitree_dex1_candidate",
+      "kind": "dataset",
+      "origin": "Unitree",
+      "url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Clean_Table/tree/80a9d440fbd5366899b5875db5a9db11f1e7857c",
+      "priority": "P0_if_matching_hand",
+      "target": "upper_body_manipulation",
+      "format": "LeRobot_v2.1_checked_task",
+      "status": "prior_metadata_inspected_not_downloaded",
+      "limits": "Need actual hand/controller/joint order and pinned package review",
+      "download": "metadata and 10 full episodes in company environment"
+    },
+    {
+      "id": "unitree_wbt_candidate",
+      "kind": "dataset",
+      "origin": "Unitree",
+      "url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Brainco_Collect_Plates_Into_Dishwasher/tree/16c01dbfcb2159783ea575acd42d1cec9b69e311",
+      "priority": "P1_whole_body_contract_study",
+      "target": "whole_body_reference",
+      "format": "LeRobot_v3.0_prior_metadata",
+      "status": "prior_metadata_inspected_not_downloaded",
+      "limits": "Brainco hand and controller must match; not evidence of free navigation or load carrying",
+      "download": "metadata and 10 full episodes after configuration confirmation"
+    },
+    {
+      "id": "unitree_xr_capture",
+      "kind": "collection_tool",
+      "origin": "Unitree",
+      "url": "https://github.com/unitreerobotics/xr_teleoperate",
+      "revision": "817fb00c63cde15e5f24a0f8fa08e1e33ed89d3b",
+      "priority": "P0_target_robot_collection",
+      "target": "teleoperation",
+      "format": "JSON_per_episode_plus_RGB_depth_audio",
+      "status": "source_reviewed_synthetic_XR_import_tested",
+      "limits": "No actual G1 capture here; nominal idx timing is not measured hardware synchronization"
+    },
+    {
+      "id": "unitree_rl_lab",
+      "kind": "simulation_training_tool",
+      "origin": "Unitree",
+      "url": "https://github.com/unitreerobotics/unitree_rl_lab",
+      "revision": "4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+      "priority": "P0_locomotion_route",
+      "target": "G1_29dof_velocity_RL",
+      "format": "environment_generates_rollouts_observation_action_reward_done",
+      "status": "official_source_reviewed_not_installed",
+      "limits": "Tool repository is not an existing dataset; confirm target variant and model/physics"
+    },
+    {
+      "id": "unitree_mujoco",
+      "kind": "simulation_validation_tool",
+      "origin": "Unitree",
+      "url": "https://github.com/unitreerobotics/unitree_mujoco",
+      "revision": "1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d",
+      "priority": "P0_controller_sim2sim",
+      "target": "low_level_control_validation",
+      "format": "DDS_lowcmd_lowstate_imu_sportmodestate",
+      "status": "official_source_reviewed_not_installed",
+      "limits": "Simulator and physical message availability differ; no real controller started"
+    },
+    {
+      "id": "lab_g1_runtime_logs",
+      "kind": "planned_internal_data",
+      "origin": "laboratory",
+      "priority": "P0_after_robot_arrival",
+      "target": "locomotion_navigation_carrying",
+      "format": "native_DDS_or_ROS2_logs_plus_calibration_command_sensor_timing",
+      "status": "capture_contract_template_only",
+      "limits": "MCAP/ROS2 locomotion adapters not implemented"
+    },
+    {
+      "id": "g1_edu_synthetic",
+      "kind": "engineering_fixture",
+      "origin": "this_repository",
+      "priority": "tutorial_only",
+      "target": "pipeline_reproduction",
+      "format": "XR_shaped_JSON_images_to_lab_JSON_to_Parquet_NPZ",
+      "status": "generated_not_physical_robot_not_physics_simulation",
+      "limits": "Two fictional channels; not any real G1 configuration"
+    }
+  ]
+}

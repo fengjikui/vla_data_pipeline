@@ -17,3 +17,8 @@ node_modules/
 *.npz
 dist/
 reports/*tests.xml
+
+# Office lock files belong to the active editor
+.~*
+
+.venv-*/

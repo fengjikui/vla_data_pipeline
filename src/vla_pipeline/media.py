@@ -22,6 +22,7 @@ def decode_at(ep, indices, size=64):
     imgs=[];pts=[]
     with av.open(str(ep.video)) as container:
         stream=container.streams.video[0]
+        stream.codec_context.thread_count=1
         container.seek(max(0,int((float(targets[0])-1)/float(stream.time_base))),stream=stream,backward=True,any_frame=False)
         last_pts=None;last_img=None;j=0
         for frame in container.decode(stream):

@@ -53,9 +53,10 @@ def load_split(directory):
 def loss_for(model,b):return masked_mse(model(b['image'],b['state'],b['tokens']),b['target'],b['mask'])
 
 
-def train_probe(release: Path,output: Path,steps=120,seed=7):
+def train_probe(release: Path,output: Path,steps=120,seed=7,threads=1):
     manifest=verify_release(release)
-    torch.set_num_threads(4);torch.manual_seed(seed);torch.use_deterministic_algorithms(True)
+    if steps<1 or threads<1:raise ValueError('Positive steps and threads required')
+    torch.set_num_threads(threads);torch.manual_seed(seed);torch.use_deterministic_algorithms(True)
     output.mkdir(parents=True,exist_ok=True)
     results=[]
     for source in manifest['sources']:
@@ -80,7 +81,7 @@ def train_probe(release: Path,output: Path,steps=120,seed=7):
             final=float(loss_for(model,train));validation=float(loss_for(model,val)) if val else None
             expected=model(train['image'][:1],train['state'][:1],train['tokens'][:1])
         checkpoint=output/(sid+'.pt')
-        torch.save({'model':model.state_dict(),'optimizer':optimizer.state_dict(),'dims':dims,'seed':seed,'steps':steps,'release_id':manifest['release_id'],'statistics_sha256':digest(release/'statistics.json')},checkpoint)
+        torch.save({'model':model.state_dict(),'optimizer':optimizer.state_dict(),'dims':dims,'seed':seed,'steps':steps,'release_id':manifest['release_id'],'pipeline_code_sha256':manifest['code_sha256'],'training_code_sha256':digest(Path(__file__)),'statistics_sha256':digest(release/'statistics.json')},checkpoint)
         restored=TinyMultimodalBC(**dims);payload=torch.load(checkpoint,map_location='cpu',weights_only=True);restored.load_state_dict(payload['model']);restored.eval()
         restored_optimizer=torch.optim.Adam(restored.parameters(),lr=.003);restored_optimizer.load_state_dict(payload['optimizer'])
         with torch.no_grad():actual=restored(train['image'][:1],train['state'][:1],train['tokens'][:1])
@@ -88,10 +89,13 @@ def train_probe(release: Path,output: Path,steps=120,seed=7):
         if restore_error>1e-7:raise ValueError('Checkpoint reload differs')
         results.append({'source_id':sid,'model':'TinyMultimodalBC_random_init','parameters':sum(p.numel() for p in model.parameters()),'input_shapes':{k:list(v.shape) for k,v in train.items()},'train_samples':n,'validation_samples':len(val['state']) if val else 0,'initial_train_masked_mse':initial,'final_train_masked_mse':final,'validation_masked_mse':validation,'finite_gradients':True,'checkpoint_reload_max_abs_error':restore_error,'optimizer_state_restored':True,'wall_seconds':round(time.perf_counter()-start,3),'curve':curve,'checkpoint_sha256':digest(checkpoint),'checkpoint_file':checkpoint.name})
         print(sid,'train',round(initial,5),'->',round(final,5),'validation',validation,flush=True)
-    result={'release_id':manifest['release_id'],'purpose':'Validate RGB, time-filtered language, state, masked action chunks, gradients and checkpoint I/O. NOT pretrained VLA fine-tuning or robot capability evaluation.','seed':seed,'steps_per_source':steps,'device':'cpu','python':platform.python_version(),'torch':torch.__version__,'machine':platform.machine(),'platform':platform.platform(),'results':results}
+    result={'release_id':manifest['release_id'],'pipeline_code_sha256':manifest['code_sha256'],'training_code_sha256':digest(Path(__file__)),'purpose':'Validate RGB, time-filtered language, state, masked action chunks, gradients and checkpoint I/O. NOT pretrained VLA fine-tuning or robot capability evaluation.','seed':seed,'steps_per_source':steps,'threads':threads,'device':'cpu','python':platform.python_version(),'torch':torch.__version__,'machine':platform.machine(),'platform':platform.platform(),'results':results}
     write_json(output/'training_probe.json',result)
     return result
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=Path('data'));p.add_argument('--output',type=Path,default=Path('data/training'));p.add_argument('--steps',type=int,default=120);args=p.parse_args()
-    rid=json.loads((args.root/'latest.json').read_text())['release_id'];train_probe(args.root/'releases'/rid,args.output,args.steps)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=Path('data'));p.add_argument('--output',type=Path,default=Path('data/training'));p.add_argument('--steps',type=int,default=120);p.add_argument('--threads',type=int,default=1);p.add_argument('--release',type=Path);args=p.parse_args()
+    release=args.release
+    if release is None:
+        rid=json.loads((args.root/'latest.json').read_text(encoding='utf-8'))['release_id'];release=args.root/'releases'/rid
+    train_probe(release,args.output,args.steps,threads=args.threads)
