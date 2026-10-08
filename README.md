@@ -6,7 +6,7 @@
 
 ## G1 EDU 数据工程（2026-10-08）
 
-采购对象已明确为 **G1 EDU**，具体自由度、手型和控制配置待确认。新增了 XR JSON/图片接入、完整原始快照与哈希、不可改写本地批次、明确 recipe、训练窗口 Dataset，以及固定官方 SDK 的可选 LeRobot 导出桥。
+采购对象已明确为 **G1 EDU**，具体自由度、手型和控制配置待确认。基础管线现已在 Ubuntu 24.04 和 Windows **各通过 40 项测试、CLI 与 wheel 构建**（[CI](https://github.com/fengjikui/vla_data_pipeline/actions/runs/37755702032)）。新增了 XR JSON/图片接入、完整原始快照与哈希、不可改写本地批次、明确 recipe、训练窗口 Dataset，以及固定官方 SDK 的可选 LeRobot 导出桥。
 
 - [数据工程手册](docs/13-g1-edu-data-engineering.md)：现有与候选来源、行走/导航/上肢/搬运的数据区别、逐阶段流程。
 - [手工复现教程](docs/14-g1-edu-manual-reproduction.md)：不需要机器人或数据下载，从合成小样本逐条跑到训练 batch。

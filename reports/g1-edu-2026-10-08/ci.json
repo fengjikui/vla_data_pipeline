@@ -1,0 +1,39 @@
+{
+  "checked_on": "2026-10-08",
+  "run_id": 37755702032,
+  "url": "https://github.com/fengjikui/vla_data_pipeline/actions/runs/37755702032",
+  "tested_commit": "d9fff32d701ad001ce1517b36e61d928be38be4c",
+  "pipeline_code_sha256": "e7ec3c69d8d855bea7dd8e7fd28464128cbb60e928a70de82813e31da812f274",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "contracts (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/fengjikui/vla_data_pipeline/actions/runs/37755702032/job/113239574314"
+    },
+    {
+      "name": "contracts (ubuntu-24.04)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/fengjikui/vla_data_pipeline/actions/runs/37755702032/job/113239574806"
+    }
+  ],
+  "artifact_test_counts": {
+    "results-ubuntu-24.04": {
+      "tests": "40",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.132"
+    },
+    "results-windows-latest": {
+      "tests": "40",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "12.464"
+    }
+  },
+  "scope": "Core contracts, synthetic integration, CLI and wheel; optional official SDK was executed separately on macOS arm64"
+}
